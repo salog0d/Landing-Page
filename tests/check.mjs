@@ -1,4 +1,5 @@
-// Smoke checks for motion, reduced motion, mobile layout/menu and the contact form.
+// Smoke checks for motion, reduced motion, mobile layout/menu, the qualifying form
+// and the website review page.
 // Run: npm test  (starts its own Vite dev server with a fake form endpoint)
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
@@ -6,6 +7,7 @@ import { chromium } from 'playwright';
 
 const PORT = 5199;
 const BASE = `http://localhost:${PORT}/`;
+const REVIEW = `${BASE}website-review.html`;
 const ENDPOINT = 'https://formspree.io/f/test-endpoint';
 
 const server = spawn('npx', ['vite', '--port', String(PORT), '--strictPort'], {
@@ -27,12 +29,12 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
 const DESKTOP = { viewport: { width: 1440, height: 900 } };
 const MOBILE = { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true };
 
-async function open(options, reducedMotion) {
+async function open(url, options, reducedMotion) {
   const ctx = await browser.newContext({ ...options, reducedMotion });
   const page = await ctx.newPage();
   const requests = [];
   page.on('request', (r) => requests.push(r.url()));
-  await page.goto(BASE, { waitUntil: 'networkidle' });
+  await page.goto(url, { waitUntil: 'networkidle' });
   await page.waitForTimeout(2500); // idle-loaded GSAP + font refresh
   return { ctx, page, requests };
 }
@@ -52,28 +54,28 @@ async function test(name, fn) {
   }
 }
 
-await test('desktop: services pin + scrub, compositor-only inline styles', async () => {
-  const { ctx, page } = await open(DESKTOP, 'no-preference');
+await test('desktop: system pin + scrub, compositor-only inline styles', async () => {
+  const { ctx, page } = await open(BASE, DESKTOP, 'no-preference');
   await page.waitForSelector('.pin-spacer', { state: 'attached', timeout: 5000 });
-  assert.equal(await page.locator('.services.has-pin').count(), 1);
+  assert.equal(await page.locator('.system.has-pin').count(), 1);
 
-  let o = await opacity(page, '.service');
+  let o = await opacity(page, '.capability');
   assert.equal(o[0], 1);
   assert.equal(o[1], 0);
 
-  // Scroll to the third service (labels are every 0.75 viewport).
+  // Scroll to the third capability (labels are every 0.75 viewport).
   await page.evaluate(() => {
     const top = document.querySelector('.pin-spacer').getBoundingClientRect().top + scrollY;
     window.scrollTo(0, top + innerHeight * 0.75 * 2);
   });
   await page
     .waitForFunction(
-      () => getComputedStyle(document.querySelectorAll('.service')[2]).opacity === '1',
+      () => getComputedStyle(document.querySelectorAll('.capability')[2]).opacity === '1',
       null,
       { timeout: 5000 },
     )
     .catch(() => {});
-  o = await opacity(page, '.service');
+  o = await opacity(page, '.capability');
   assert.ok(o[2] > 0.9, `third card should be visible, got ${o[2]}`);
   assert.ok(o[0] < 0.1, `first card should be hidden, got ${o[0]}`);
 
@@ -83,7 +85,7 @@ await test('desktop: services pin + scrub, compositor-only inline styles', async
     const ok = /^(--.*|transform|opacity|translate|rotate|scale|transform-origin)$/;
     const offenders = [];
     for (const el of document.querySelectorAll('main [style]')) {
-      if (el.matches('.pin-spacer, .services__stage')) continue;
+      if (el.matches('.pin-spacer, .system__stage')) continue;
       for (const prop of Array.from(el.style))
         if (!ok.test(prop)) offenders.push(`${el.className}: ${prop}`);
     }
@@ -95,7 +97,7 @@ await test('desktop: services pin + scrub, compositor-only inline styles', async
 });
 
 await test('reduced motion: no GSAP, no pin, everything visible', async () => {
-  const { ctx, page, requests } = await open(DESKTOP, 'reduce');
+  const { ctx, page, requests } = await open(BASE, DESKTOP, 'reduce');
   assert.equal(
     requests.filter((u) => /motion\.(ts|js)|gsap/.test(u)).length,
     0,
@@ -104,10 +106,10 @@ await test('reduced motion: no GSAP, no pin, everything visible', async () => {
   assert.equal(await page.locator('.pin-spacer').count(), 0);
   assert.equal(await page.locator('.has-pin').count(), 0);
   for (const sel of [
-    '.service',
+    '.capability',
     '.reveal',
     '.hero__title .w > span',
-    '.values li',
+    '.trust__list li',
     '.hero__lead',
   ]) {
     const o = await opacity(page, sel);
@@ -127,11 +129,11 @@ await test('reduced motion: no GSAP, no pin, everything visible', async () => {
   await ctx.close();
 });
 
-await test('mobile: no pin, services in normal flow, no horizontal scroll', async () => {
-  const { ctx, page } = await open(MOBILE, 'no-preference');
+await test('mobile: no pin, capabilities in normal flow, no horizontal scroll', async () => {
+  const { ctx, page } = await open(BASE, MOBILE, 'no-preference');
   assert.equal(await page.locator('.pin-spacer').count(), 0);
   assert.equal(await page.locator('.has-pin').count(), 0);
-  const boxes = await page.$$eval('.service', (els) =>
+  const boxes = await page.$$eval('.capability', (els) =>
     els.map((el) => el.getBoundingClientRect()).map((r) => ({ x: r.x, y: r.y })),
   );
   boxes.slice(1).forEach((b, i) => {
@@ -143,7 +145,7 @@ await test('mobile: no pin, services in normal flow, no horizontal scroll', asyn
 });
 
 await test('mobile menu: open, Escape closes and restores focus, link closes', async () => {
-  const { ctx, page } = await open(MOBILE, 'no-preference');
+  const { ctx, page } = await open(BASE, MOBILE, 'no-preference');
   const toggle = page.locator('.nav__toggle');
   const link = page.locator('.nav__links a', { hasText: 'Services' });
   assert.equal(await link.isVisible(), false);
@@ -162,44 +164,88 @@ await test('mobile menu: open, Escape closes and restores focus, link closes', a
   await ctx.close();
 });
 
-await test('form: labels, native validation, aria-live success and error', async () => {
-  const { ctx, page, requests } = await open(DESKTOP, 'reduce');
+await test('form: labeled fields, step validation, aria-live success and error', async () => {
+  const { ctx, page, requests } = await open(BASE, DESKTOP, 'reduce');
   const unlabeled = await page.$$eval(
-    '#contact-form input:not(.hp), #contact-form textarea',
+    '#contact-form input:not(.hp):not([type="hidden"]), #contact-form textarea, #contact-form select',
     (els) =>
-      els.filter((el) => !document.querySelector(`label[for="${el.id}"]`)).map((el) => el.name),
+      els.filter((el) => (el.labels?.length ?? 0) === 0).map((el) => el.getAttribute('name')),
   );
   assert.deepEqual(unlabeled, []);
   const status = page.locator('#form-status');
   assert.equal(await status.getAttribute('aria-live'), 'polite');
 
-  await page.click('#contact-form button[type="submit"]');
-  assert.equal(requests.filter((u) => u === ENDPOINT).length, 0, 'empty form was sent');
+  const step2 = page.locator('#contact-form .step').nth(1);
+  assert.equal(await step2.isHidden(), true);
+
+  // Next on empty step 1: native validation keeps us on step 1, nothing sent.
+  await page.click('#contact-form [data-next]');
+  assert.equal(await step2.isHidden(), true);
+  assert.equal(requests.filter((u) => u === ENDPOINT).length, 0);
 
   let reply = 200;
-  await page.route(ENDPOINT, (route) =>
-    route.fulfill({ status: reply, contentType: 'application/json', body: '{}' }),
-  );
-  const fill = async () => {
+  let posted = '';
+  await page.route(ENDPOINT, (route) => {
+    posted = route.request().postData() ?? '';
+    route.fulfill({ status: reply, contentType: 'application/json', body: '{}' });
+  });
+  const fillSteps = async () => {
+    await page.check('input[name="need"][value="New website"]');
+    await page.check('input[name="investment"][value="$2,500–$4,000"]');
+    await page.check('input[name="timing"][value="1–3 months"]');
+    await page.click('#contact-form [data-next]');
     await page.fill('#f-name', 'Test');
+    await page.fill('#f-company', 'Test Co');
     await page.fill('#f-email', 'test@example.com');
-    await page.fill('#f-subject', 'Hello');
-    await page.fill('#f-message', 'Testing the form.');
-    await page.click('#contact-form button[type="submit"]');
+    await page.fill('#f-website', 'https://example.com');
+    await page.check('input[name="outcome"][value="Generate leads"]');
+    await page.fill('#f-context', 'We need more qualified inquiries.');
   };
-  await fill();
+  await fillSteps();
+  await page.click('#contact-form button[type="submit"]');
   await page.waitForFunction(
     () => document.querySelector('#contact-form').dataset.state === 'success',
   );
-  assert.match(await status.textContent(), /Thanks/);
+  assert.match(await status.textContent(), /business day/);
+  assert.ok(posted.includes('name="need"'), 'qualifier fields missing from submission');
+  assert.ok(posted.includes('name="_subject"'), 'subject missing from submission');
   assert.equal(await page.inputValue('#f-name'), '');
+  assert.equal(await step2.isHidden(), true); // reset returns to step 1
 
   reply = 500;
-  await fill();
+  await fillSteps();
+  await page.click('#contact-form button[type="submit"]');
   await page.waitForFunction(
     () => document.querySelector('#contact-form').dataset.state === 'error',
   );
   assert.match(await status.textContent(), /went wrong/);
+  await ctx.close();
+});
+
+await test('review page: labeled form posts to the endpoint', async () => {
+  const { ctx, page } = await open(REVIEW, DESKTOP, 'reduce');
+  assert.match(await page.locator('h1').textContent(), /free website review/i);
+  const unlabeled = await page.$$eval(
+    '#review-form input:not(.hp):not([type="hidden"]), #review-form textarea, #review-form select',
+    (els) =>
+      els.filter((el) => (el.labels?.length ?? 0) === 0).map((el) => el.getAttribute('name')),
+  );
+  assert.deepEqual(unlabeled, []);
+
+  let posted = '';
+  await page.route(ENDPOINT, (route) => {
+    posted = route.request().postData() ?? '';
+    route.fulfill({ status: 200, contentType: 'application/json', body: '{}' });
+  });
+  await page.fill('#f-url', 'https://example.com');
+  await page.fill('#f-email', 'test@example.com');
+  await page.check('input[name="priority"][value="More inquiries"]');
+  await page.click('#review-form button[type="submit"]');
+  await page.waitForFunction(
+    () => document.querySelector('#review-form').dataset.state === 'success',
+  );
+  assert.ok(posted.includes('name="url"'), 'URL missing from submission');
+  assert.ok(await noHorizontalScroll(page), 'horizontal overflow');
   await ctx.close();
 });
 

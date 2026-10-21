@@ -91,6 +91,10 @@ img {
   overflow: hidden;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .accent {
   color: var(--accent);
 }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fantazylabz.com/sitemap.xml
+Sitemap: https://salog0d.github.io/Landing-Page/sitemap.xml

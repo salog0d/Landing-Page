@@ -17,10 +17,10 @@
 | **Posicionamiento** | "Tu socio principal en consultoría de software" |
 
 ✏️ **¿Qué quiero que sienta el visitante en los primeros 5 segundos?**
-> _Escribe aquí…_
+> "Este equipo entiende mi negocio de servicios, habla de resultados (prospectos), y trabajar con ellos no parece arriesgado aunque sean remotos."
 
 ✏️ **Mi frase en una línea (qué hago + para quién + resultado):**
-> _Ej: "Construimos software a la medida para PyMEs de Monterrey que quieren vender más en línea."_
+> "Construimos sitios web orientados a captación para negocios de servicios en Estados Unidos que quieren más prospectos calificados." (Headline: "Websites built to turn attention into business.")
 
 ---
 
@@ -71,7 +71,7 @@ Fantazy Labz es tu socio principal en consultoría de software. Nuestro equipo e
 | **Arquitectura de Software** | Arquitecturas robustas y escalables, con alta disponibilidad y fácil mantenimiento. |
 
 ✏️ ¿Cuál es mi servicio estrella (el que quiero vender primero)?
-> _Escribe aquí…_
+> "Fantazy Website System": paquete completo (estrategia → mensaje → UX/UI → desarrollo → SEO → analítica) para negocios de servicios. Vender el sistema, no horas ni número de páginas.
 
 ---
 
@@ -104,7 +104,7 @@ Banorte · Gobierno de Coahuila · Aeromontre · All Physicians · Nanas · Sour
 - **Boletín:** "¡Suscríbete a nuestro boletín y recibe las últimas noticias!"
 
 ✏️ ¿Cuál es la ÚNICA acción que quiero que haga el visitante? (agendar llamada / WhatsApp / cotizar / formulario)
-> _Escribe aquí…_
+> Dos niveles: **Start a Project** (demanda activa → formulario de calificación) y **Get a Website Review** (tráfico frío → URL + email). La única misión de la página: iniciar una oportunidad calificada.
 
 ---
 
@@ -148,7 +148,7 @@ Moderno y tecnológico, contraste oscuro/claro con acento magenta; fotos de equi
 **Actual:** profesional, corporativo, orientado a innovación. Usa "nosotros" y tutea al cliente ("tu socio", "tu futuro digital").
 
 ✏️ ¿Cómo quiero sonar? (cercano / técnico / premium / directo / divertido)
-> _Escribe aquí…_
+> Directo, comercial y sin humo: hablar primero del resultado del cliente y después de la tecnología. Prohibido "affordable", "cheap" o aparentar ser empresa de EE. UU. Transparencia: "Mexico based remote studio with US time zone overlap".
 
 ---
 
@@ -174,15 +174,45 @@ Moderno y tecnológico, contraste oscuro/claro con acento magenta; fotos de equi
 10. Footer: links, servicios, boletín
 
 ✏️ Mi estructura deseada (reordena, elimina o agrega):
-1. …
+1. Navbar: Services · Work · Process · Pricing · FAQ · [Start a Project]
+2. Hero: promesa + subheadline + 2 CTAs + línea de bajo riesgo
+3. Trust strip: clear scope, direct collaboration, remote workflow, ownership
+4. Problem: los 4 dolores del cliente
+5. Transformation: before → after
+6. Featured work: 1 caso destacado + 2 proyectos secundarios
+7. Website System: las 6 capacidades del paquete
+8. Lean model: ventaja económica sin vender barato
+9. Process: 5 pasos
+10. Pricing: Launch / Growth / Custom (from) + planes recurrentes (Care)
+11. Delivery commitments: 5 compromisos por escrito
+12. Why Fantazy: equipo después de crear relevancia
+13. Testimonios (breves y verificables)
+14. FAQ: incluye transparencia de ubicación
+15. Final CTA + formulario de calificación en 2 pasos
+16. Footer: servicios, redes, email, privacy y terms
 
 ---
 
-## 12. Detalles detectados en el sitio actual (para corregir)
+## 12. Detalles detectados en el sitio anterior (corregidos)
 
-- Los testimonios están cortados con "…" y no tienen el texto completo.
-- El logo de "Source Medical" aparece duplicado.
-- El H1 tiene un "." suelto entre el eslogan y el subtítulo.
-- El footer mezcla idiomas ("Copyright … All Rights Reserved").
-- La sección "Nuestro Blog" del footer solo es un boletín; no hay blog.
-- Los mensajes son genéricos ("innovación", "soluciones") y no dicen para quién es ni qué resultado concreto se obtiene.
+- ~~Los testimonios están cortados con "…"~~ → completados con frases breves; **pendiente confirmar el texto íntegro con cada cliente**.
+- ~~El logo de "Source Medical" aparece duplicado~~ → marquee con nombres únicos.
+- ~~El H1 tiene un "." suelto~~ → nuevo H1 sin errores.
+- ~~El footer mezcla idiomas~~ → footer 100% en inglés.
+- ~~"Nuestro Blog" solo era un boletín~~ → eliminado; footer ahora enlaza privacy y terms reales.
+- ~~Los mensajes son genéricos~~ → copy orientado a resultado ("what should the visitor do next?").
+
+---
+
+## 13. Estrategia comercial aplicada (oct-2026)
+
+La página se reconstruyó siguiendo `Estrategia_comercial_one_pager_Fantazy_Labz.docx`:
+
+- **Posicionamiento:** "Websites built to turn attention into business." Sitio en inglés para negocios de servicios en EE. UU.
+- **Oferta empaquetada:** Fantazy Website System (no se venden páginas ni horas).
+- **Conversión de dos niveles:** Start a Project (formulario de calificación en 2 pasos) + Get a Website Review (página propia `/website-review/`, respuesta en 2 días hábiles).
+- **Precios como hipótesis:** Launch desde $2,500 · Growth desde $4,500 · Custom desde $7,500 USD, más ruta recurrente (Website Care $250/mo, Growth Care $750/mo, Automation Support custom).
+- **Evidencia antes que precio:** work adelantado, caso destacado con contexto/decisión/entregables/resultado, sin métricas inventadas.
+- **Confianza transfronteriza:** FAQ con "Mexico based remote technology studio… US time zone collaboration"; compromisos de entrega por escrito; privacy y terms publicados.
+- **Medición:** formulario con `_subject` por tipo de lead; quedan pendientes eventos, UTMs, CRM y tablero comercial (siguiente fase).
+- **Pendientes siguientes:** páginas por vertical para campañas/outbound, confirmar testimonios, revisar textos legales y validar precios contra margen real.

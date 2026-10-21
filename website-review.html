@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Website Review — Fantazy Labz</title>
+    <meta
+      name="description"
+      content="Send us your website and we'll reply within two business days with three concrete observations to help it convert more visitors. Free, no call required."
+    />
+    <link rel="canonical" href="https://salog0d.github.io/Landing-Page/website-review.html" />
+    <meta name="theme-color" content="#060606" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://salog0d.github.io/Landing-Page/website-review.html" />
+    <meta property="og:site_name" content="Fantazy Labz" />
+    <meta property="og:title" content="Get a free website review — Fantazy Labz" />
+    <meta
+      property="og:description"
+      content="Three concrete observations to help your website convert more visitors. Free, no call required."
+    />
+    <meta property="og:image" content="https://salog0d.github.io/Landing-Page/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Gate reveal styles on JS so content is never hidden without it. -->
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav">
+      <div class="nav__bar container">
+        <a class="nav__logo" href="index.html" aria-label="Fantazy Labz home">
+          Fantazy<span>Labz</span>
+        </a>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open menu"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="nav__menu" id="nav-menu" aria-label="Main">
+          <ul class="nav__links">
+            <li style="--i: 0"><a href="index.html#services">Services</a></li>
+            <li style="--i: 1"><a href="index.html#work">Work</a></li>
+            <li style="--i: 2"><a href="index.html#pricing">Pricing</a></li>
+            <li style="--i: 3"><a href="index.html#faq">FAQ</a></li>
+          </ul>
+          <a class="btn btn--accent btn--sm" style="--i: 4" href="index.html#start"
+            >Start a Project</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero hero--page" id="top">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__inner container">
+          <p class="eyebrow hero__eyebrow">Free website review</p>
+          <h1 class="hero__title">
+            <span class="sr-only">Get a free website review.</span>
+            <span aria-hidden="true">
+              <span class="w"><span style="--i: 0">Get</span></span>
+              <span class="w"><span style="--i: 1">a</span></span>
+              <span class="w"><span style="--i: 2">free</span></span>
+              <span class="w"><span style="--i: 3">website</span></span>
+              <span class="w"><span class="accent" style="--i: 4">review.</span></span>
+            </span>
+          </h1>
+          <p class="hero__lead">
+            Send us your URL and we'll reply within two business days with three concrete
+            observations to help your website convert more visitors — no call required, no
+            obligation.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#review-form">Request Your Free Review</a>
+            <a class="btn btn--ghost" href="index.html#work">See Our Work</a>
+          </div>
+          <p class="hero__risk">Free · No call required · Reply within two business days</p>
+        </div>
+      </section>
+
+      <!-- WHAT YOU GET -->
+      <section class="section what" aria-labelledby="what-title">
+        <div class="container">
+          <p class="eyebrow">What you get</p>
+          <h2 class="h2" id="what-title">Three observations. Zero pressure.</h2>
+          <div class="grid-3">
+            <article class="tile reveal">
+              <h3>Three concrete observations</h3>
+              <p>What's working, what's costing you leads and what to fix first.</p>
+            </article>
+            <article class="tile reveal" style="--d: 1">
+              <h3>Actionable next steps</h3>
+              <p>
+                Practical recommendations your team can act on, whether or not we work together.
+              </p>
+            </article>
+            <article class="tile reveal" style="--d: 2">
+              <h3>No pressure</h3>
+              <p>If we see a fit, we'll explain the plan. If not, the review stands on its own.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM -->
+      <section class="section review" id="review" aria-labelledby="review-form-title">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow">Your review</p>
+            <h2 class="h2" id="review-form-title">What we review.</h2>
+            <ul class="review-check">
+              <li><span>Messaging clarity — does your offer make sense in seconds?</span></li>
+              <li><span>Conversion path — is there one clear next step on every page?</span></li>
+              <li><span>Mobile experience — how does it behave on a phone?</span></li>
+              <li><span>Speed and search foundations — what's leaking performance?</span></li>
+            </ul>
+            <p class="lead review__lead">
+              We review every submission personally and reply within two business days.
+            </p>
+          </div>
+
+          <form
+            class="form reveal"
+            id="review-form"
+            data-js-form
+            data-sending="Sending your request…"
+            data-success="Thanks! Your review is in the queue. Expect three concrete observations within two business days."
+            data-error="Something went wrong. Please try again or email us at proyectos@fantazylabz.tech."
+          >
+            <input type="hidden" name="_subject" value="Website Review — fantazylabz.com" />
+
+            <div class="field">
+              <label for="f-url">Website URL</label>
+              <input
+                id="f-url"
+                name="url"
+                type="url"
+                placeholder="https://yourwebsite.com"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="f-email">Work email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <fieldset class="fieldset">
+              <legend>What matters most right now?</legend>
+              <div class="options">
+                <label class="opt"
+                  ><input type="radio" name="priority" value="More inquiries" required />More
+                  inquiries</label
+                >
+                <label class="opt"
+                  ><input type="radio" name="priority" value="Better credibility" />Better
+                  credibility</label
+                >
+                <label class="opt"
+                  ><input type="radio" name="priority" value="Easier to manage" />Easier to
+                  manage</label
+                >
+                <label class="opt"
+                  ><input type="radio" name="priority" value="Not sure" />Not sure</label
+                >
+              </div>
+            </fieldset>
+
+            <!-- Formspree honeypot: bots fill it, humans never see it. -->
+            <input
+              class="hp"
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <button class="btn btn--accent" type="submit">Request your free review</button>
+            <p class="form__status" data-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq" aria-labelledby="review-faq-title">
+        <div class="container">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="h2" id="review-faq-title">Questions about the review.</h2>
+          <div class="faq__list">
+            <details class="reveal">
+              <summary>What does the review cost?</summary>
+              <p>Nothing. It's a free, personal review of your website.</p>
+            </details>
+            <details class="reveal">
+              <summary>What happens after I send my URL?</summary>
+              <p>
+                We review it and reply within two business days with three concrete observations.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Do I need to get on a call?</summary>
+              <p>
+                No. If the observations suggest a bigger opportunity, we'll offer next steps — but
+                there's no obligation and no required call.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Why do you offer this for free?</summary>
+              <p>
+                It's the fastest way for you to judge how we think, and for us to understand your
+                business. Good reviews open honest conversations.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="cta cta--sm" aria-labelledby="final-cta-title">
+        <div class="container">
+          <h2 class="cta__title" id="final-cta-title">
+            Ready to skip the <span class="accent">review?</span>
+          </h2>
+          <p class="cta__text">
+            Start a project and we'll reply within one business day with the best next step.
+          </p>
+          <a class="btn btn--accent reveal" href="index.html#start">Start a Project</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="nav__logo" href="index.html">Fantazy<span>Labz</span></a>
+          <p class="muted">
+            Websites built to turn attention into business. Strategy, design and development for
+            service businesses.
+          </p>
+          <p class="footer__location">Mexico based remote studio · US time zone overlap</p>
+        </div>
+        <nav aria-label="Explore">
+          <h2 class="footer__h">Explore</h2>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="footer__h">Company</h2>
+          <ul>
+            <li><a href="index.html#why">Why Fantazy Labz</a></li>
+            <li><a href="index.html#start">Start a Project</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__h">Contact</h2>
+          <ul>
+            <li><a href="mailto:proyectos@fantazylabz.tech">proyectos@fantazylabz.tech</a></li>
+            <li><a href="tel:+528134779998">+52 81 3477 9998</a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551452519077"
+                target="_blank"
+                rel="noopener"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/fantazy_labz/" target="_blank" rel="noopener"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer__legal">
+        <p>© 2026 Fantazy Labz</p>
+        <nav aria-label="Legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

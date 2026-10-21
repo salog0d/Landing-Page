@@ -3,34 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fantazy Labz — Software Consulting in Monterrey</title>
+    <title>Fantazy Labz — Websites Built to Turn Attention Into Business</title>
     <meta
       name="description"
-      content="Software consulting in Monterrey: web and mobile development, software architecture, databases, UI/UX and MVPs."
+      content="Strategy, design and development for service businesses ready to look better, convert more and grow without traditional agency overhead. Remote studio with US time zone collaboration."
     />
     <meta
       name="keywords"
-      content="software consulting, web development, mobile development, software architecture, UI/UX, databases, MVP, Monterrey"
+      content="web design, web development, service businesses, lead generation, conversion, website system, SEO, US"
     />
-    <link rel="canonical" href="https://fantazylabz.com/" />
+    <link rel="canonical" href="https://salog0d.github.io/Landing-Page/" />
     <meta name="theme-color" content="#060606" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fantazylabz.com/" />
+    <meta property="og:url" content="https://salog0d.github.io/Landing-Page/" />
     <meta property="og:site_name" content="Fantazy Labz" />
     <meta
       property="og:title"
-      content="Fantazy Labz — Innovation in every line of code. At the forefront of digital transformation."
+      content="Fantazy Labz — Websites built to turn attention into business."
     />
     <meta
       property="og:description"
-      content="Software consulting in Monterrey: web and mobile development, software architecture, databases, UI/UX and MVPs."
+      content="Strategy, design and development for service businesses ready to look better, convert more and grow without traditional agency overhead."
     />
-    <meta property="og:image" content="https://fantazylabz.com/og.png" />
+    <meta property="og:image" content="https://salog0d.github.io/Landing-Page/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Fantazy Labz — Innovation in every line of code." />
+    <meta
+      property="og:image:alt"
+      content="Fantazy Labz — Websites built to turn attention into business."
+    />
     <meta name="twitter:card" content="summary_large_image" />
 
     <script type="application/ld+json">
@@ -38,8 +41,9 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Fantazy Labz",
-        "url": "https://fantazylabz.com/",
-        "image": "https://fantazylabz.com/og.png",
+        "url": "https://salog0d.github.io/Landing-Page/",
+        "image": "https://salog0d.github.io/Landing-Page/og.png",
+        "description": "Technology studio that helps service businesses clarify their offer and turn their website into a measurable customer acquisition asset. Mexico based remote studio with US time zone collaboration.",
         "telephone": "+52 81 3477 9998",
         "email": "proyectos@fantazylabz.tech",
         "address": {
@@ -50,6 +54,7 @@
           "addressRegion": "N.L.",
           "addressCountry": "MX"
         },
+        "areaServed": "US",
         "sameAs": [
           "https://www.facebook.com/profile.php?id=61551452519077",
           "https://www.instagram.com/fantazy_labz/"
@@ -81,305 +86,185 @@
         </button>
         <nav class="nav__menu" id="nav-menu" aria-label="Main">
           <ul class="nav__links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li style="--i: 0"><a href="#services">Services</a></li>
+            <li style="--i: 1"><a href="#work">Work</a></li>
+            <li style="--i: 2"><a href="#process">Process</a></li>
+            <li style="--i: 3"><a href="#pricing">Pricing</a></li>
+            <li style="--i: 4"><a href="#faq">FAQ</a></li>
           </ul>
-          <a class="btn btn--accent btn--sm" href="#contact">Get started</a>
+          <a class="btn btn--accent btn--sm" style="--i: 5" href="#start">Start a Project</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <!-- HERO -->
+      <!-- 01 · HERO -->
       <section class="hero" id="top">
         <div class="hero__glow" aria-hidden="true"></div>
         <div class="hero__inner container">
-          <p class="eyebrow hero__eyebrow">Software consulting · Monterrey, MX</p>
+          <p class="eyebrow hero__eyebrow">Web design &amp; development for service businesses</p>
           <h1 class="hero__title">
-            <span class="sr-only">Innovation in every line of code.</span>
+            <span class="sr-only">Websites built to turn attention into business.</span>
             <span aria-hidden="true">
-              <span class="w"><span style="--i: 0">Innovation</span></span>
-              <span class="w"><span style="--i: 1">in</span></span>
-              <span class="w"><span style="--i: 2">every</span></span>
-              <span class="w"><span style="--i: 3">line</span></span>
-              <span class="w"><span style="--i: 4">of</span></span>
-              <span class="w"><span class="accent" style="--i: 5">code.</span></span>
+              <span class="w"><span style="--i: 0">Websites</span></span>
+              <span class="w"><span style="--i: 1">built</span></span>
+              <span class="w"><span style="--i: 2">to</span></span>
+              <span class="w"><span style="--i: 3">turn</span></span>
+              <span class="w"><span class="accent" style="--i: 4">attention</span></span>
+              <span class="w"><span style="--i: 5">into</span></span>
+              <span class="w"><span style="--i: 6">business.</span></span>
             </span>
           </h1>
-          <p class="hero__lead">At the forefront of digital transformation.</p>
+          <p class="hero__lead">
+            Strategy, design and development for service businesses ready to look better, convert
+            more and grow without traditional agency overhead.
+          </p>
           <div class="hero__actions">
-            <a class="btn btn--accent" href="#contact">Get started</a>
-            <a class="btn btn--ghost" href="#work">See our work</a>
+            <a class="btn btn--accent" href="#start">Start Your Website</a>
+            <a class="btn btn--ghost" href="#work">See Our Work</a>
           </div>
-          <ul class="values" aria-label="Our values">
-            <li style="--n: 0">Innovation</li>
-            <li style="--n: 1">Quality</li>
-            <li style="--n: 2">Commitment</li>
-            <li style="--n: 3">Integrity</li>
-            <li style="--n: 4">Collaboration</li>
-          </ul>
+          <p class="hero__risk">Free project consultation · No commitment</p>
         </div>
       </section>
 
-      <!-- ABOUT -->
-      <section class="section about" id="about" aria-labelledby="about-title">
-        <div class="container">
-          <h2 class="eyebrow" id="about-title">Our company</h2>
-          <p class="highlight">
-            Fantazy Labz is your go-to software consulting partner. Our expert team, innovative
-            solutions and client-first approach take the complexity out of technology.
-          </p>
+      <!-- 02 · TRUST STRIP -->
+      <section class="trust" aria-label="How we work">
+        <ul class="trust__list container">
+          <li class="reveal">
+            <strong>Clear scope</strong>
+            <span>Deliverables, revisions and exclusions written before build.</span>
+          </li>
+          <li class="reveal" style="--d: 1">
+            <strong>Direct collaboration</strong>
+            <span>You work with the people building your site.</span>
+          </li>
+          <li class="reveal" style="--d: 2">
+            <strong>Remote workflow</strong>
+            <span>US time zone overlap and agreed checkpoints.</span>
+          </li>
+          <li class="reveal" style="--d: 3">
+            <strong>You own the website</strong>
+            <span>Domains, accounts and code handed over to you.</span>
+          </li>
+        </ul>
+      </section>
 
-          <div class="grid-3">
+      <!-- 03 · PROBLEM -->
+      <section class="section problem" id="problem" aria-labelledby="problem-title">
+        <div class="container">
+          <p class="eyebrow">The problem</p>
+          <h2 class="h2" id="problem-title">
+            Your website should work as hard as the business behind it.
+          </h2>
+          <div class="problem__grid">
             <article class="tile reveal">
-              <h3>Highly skilled team</h3>
-              <p>
-                Consultants with expertise across technologies and methodologies, running every
-                project with the highest level of competence.
-              </p>
+              <h3>It looks outdated</h3>
+              <p>Your business evolved. Your website did not.</p>
             </article>
             <article class="tile reveal" style="--d: 1">
-              <h3>Innovative solutions</h3>
-              <p>
-                Advanced, tailor-made technology built with the latest tools and techniques in the
-                industry.
-              </p>
+              <h3>It doesn't generate leads</h3>
+              <p>Visitors arrive, look around and leave without a clear next step.</p>
             </article>
             <article class="tile reveal" style="--d: 2">
-              <h3>Adaptability</h3>
-              <p>
-                We adapt quickly to technology and market shifts, so your solution stays relevant
-                and effective.
-              </p>
+              <h3>It's hard to manage</h3>
+              <p>Every small update becomes another delay.</p>
+            </article>
+            <article class="tile reveal" style="--d: 3">
+              <h3>It was built without strategy</h3>
+              <p>Good visuals cannot replace a clear conversion path.</p>
             </article>
           </div>
+          <p class="highlight">
+            We build every page around one question: what should the visitor do next?
+          </p>
+        </div>
+      </section>
 
-          <div class="split">
-            <div class="reveal">
-              <h2 class="h2">Our commitments.</h2>
-              <p class="muted">What every project gets from us, from kickoff to launch.</p>
-              <p class="stack__label">Our stack</p>
-              <ul class="stack" aria-label="Technology stack">
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>Ruby on Rails</li>
-                <li>Flutter</li>
-                <li>Java</li>
-                <li>MySQL</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
+      <!-- 04 · TRANSFORMATION -->
+      <section class="section transform" id="transformation" aria-labelledby="transform-title">
+        <div class="container">
+          <p class="eyebrow">The shift</p>
+          <h2 class="h2" id="transform-title">From digital brochure to growth asset.</h2>
+          <div class="transform__panels">
+            <div class="panel panel--before reveal">
+              <h3>Before</h3>
+              <ul>
+                <li>Generic messaging that sounds like everyone else</li>
+                <li>Weak calls to action with no clear next step</li>
+                <li>Slow pages that leak visitors</li>
+                <li>No measurement: you can't see what works</li>
               </ul>
             </div>
-            <ol class="commitments">
-              <li class="reveal">
-                <h3>Continuous innovation</h3>
-                <p>Ongoing research and development to deliver advanced solutions.</p>
-              </li>
-              <li class="reveal">
-                <h3>Tailored solutions</h3>
-                <p>Built around the specific needs of each client.</p>
-              </li>
-              <li class="reveal">
-                <h3>Experience and professionalism</h3>
-                <p>Consultants who handle every project at the highest level.</p>
-              </li>
-              <li class="reveal">
-                <h3>Client commitment</h3>
-                <p>Relationships built on trust and exceptional service.</p>
-              </li>
-            </ol>
+            <div class="panel panel--after reveal" style="--d: 1">
+              <h3>After</h3>
+              <ul>
+                <li>Clear positioning that explains your offer fast</li>
+                <li>Conversion structure that leads to one clear action</li>
+                <li>Responsive performance on every device</li>
+                <li>SEO foundations and analytics that show results</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICES: pinned + scrubbed on desktop (see motion.ts), normal flow otherwise -->
-      <section class="services" id="services" aria-labelledby="services-title">
-        <div class="services__stage container">
-          <div class="services__intro">
-            <p class="eyebrow">Services</p>
-            <h2 class="h2" id="services-title">Six ways we build.</h2>
-            <ol class="services__nav" aria-hidden="true">
-              <li>Web Development</li>
-              <li>App Development</li>
-              <li>Database Management</li>
-              <li>UI/UX Design</li>
-              <li>MVP Development</li>
-              <li>Software Architecture</li>
-            </ol>
-            <div class="services__track" aria-hidden="true"><div class="services__bar"></div></div>
-          </div>
-
-          <div class="services__cards">
-            <article class="service reveal">
-              <div class="service__art" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <rect x="6" y="9" width="36" height="24" rx="3" />
-                  <path d="M18 40h12M24 33v7" />
-                </svg>
-              </div>
-              <p class="service__num">01 / 06</p>
-              <h3>Web Development</h3>
-              <p>
-                Custom websites and scalable web applications, with SEO optimization, ongoing
-                maintenance and e-commerce with integrated payments.
-              </p>
-              <ul class="tags">
-                <li>Custom sites</li>
-                <li>Scalable apps</li>
-                <li>SEO</li>
-                <li>E-commerce</li>
-              </ul>
-            </article>
-            <article class="service reveal">
-              <div class="service__art" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <rect x="15" y="5" width="18" height="38" rx="4" />
-                  <path d="M22 37h4" />
-                </svg>
-              </div>
-              <p class="service__num">02 / 06</p>
-              <h3>App Development</h3>
-              <p>
-                Mobile apps with intuitive design, optimized for iOS and Android, backed by
-                continuous support.
-              </p>
-              <ul class="tags">
-                <li>iOS</li>
-                <li>Android</li>
-                <li>Ongoing support</li>
-              </ul>
-            </article>
-            <article class="service reveal">
-              <div class="service__art" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <ellipse cx="24" cy="11" rx="14" ry="5" />
-                  <path
-                    d="M10 11v26c0 2.8 6.3 5 14 5s14-2.2 14-5V11M10 24c0 2.8 6.3 5 14 5s14-2.2 14-5"
-                  />
-                </svg>
-              </div>
-              <p class="service__num">03 / 06</p>
-              <h3>Database Management</h3>
-              <p>
-                Design, implementation, optimization, security and ongoing maintenance of your data.
-              </p>
-              <ul class="tags">
-                <li>Design</li>
-                <li>Optimization</li>
-                <li>Security</li>
-                <li>Maintenance</li>
-              </ul>
-            </article>
-            <article class="service reveal">
-              <div class="service__art" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <rect x="6" y="8" width="36" height="32" rx="3" />
-                  <path d="M6 16h36M13 24h12M13 31h22" />
-                </svg>
-              </div>
-              <p class="service__num">04 / 06</p>
-              <h3>UI/UX Design</h3>
-              <p>
-                Intuitive interfaces shaped through research, prototyping and usability testing.
-              </p>
-              <ul class="tags">
-                <li>Research</li>
-                <li>Prototyping</li>
-                <li>Usability testing</li>
-              </ul>
-            </article>
-            <article class="service reveal">
-              <div class="service__art" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <path d="M24 5c7 5 10 13 8 23l-4 6h-8l-4-6c-2-10 1-18 8-23z" />
-                  <circle cx="24" cy="18" r="3" />
-                  <path d="M16 27l-6 7 7 1M32 27l6 7-7 1M22 39l2 5 2-5" />
-                </svg>
-              </div>
-              <p class="service__num">05 / 06</p>
-              <h3>MVP Development</h3>
-              <p>
-                Validate your market early with scalable solutions built on agile methodologies.
-              </p>
-              <ul class="tags">
-                <li>Market validation</li>
-                <li>Agile</li>
-                <li>Scalable</li>
-              </ul>
-            </article>
-            <article class="service reveal">
-              <div class="service__art" aria-hidden="true">
-                <svg viewBox="0 0 48 48">
-                  <path d="M24 6l18 9-18 9-18-9z" />
-                  <path d="M6 24l18 9 18-9M6 33l18 9 18-9" />
-                </svg>
-              </div>
-              <p class="service__num">06 / 06</p>
-              <h3>Software Architecture</h3>
-              <p>
-                Robust, scalable architectures designed for high availability and easy maintenance.
-              </p>
-              <ul class="tags">
-                <li>Scalability</li>
-                <li>High availability</li>
-                <li>Maintainability</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CLIENTS -->
-      <section class="clients" aria-labelledby="clients-title">
-        <p class="eyebrow container" id="clients-title">Companies we've worked with</p>
-        <div class="marquee">
-          <ul class="marquee__track">
-            <li>Banorte</li>
-            <li>Gobierno de Coahuila</li>
-            <li>Aeromontre</li>
-            <li>All Physicians</li>
-            <li>Nanas</li>
-            <li>Source Medical</li>
-          </ul>
-          <ul class="marquee__track" aria-hidden="true">
-            <li>Banorte</li>
-            <li>Gobierno de Coahuila</li>
-            <li>Aeromontre</li>
-            <li>All Physicians</li>
-            <li>Nanas</li>
-            <li>Source Medical</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="cta" aria-labelledby="cta-title">
-        <div class="container">
-          <h2 class="cta__title" id="cta-title">
-            Start your <span class="accent">digital future.</span>
-          </h2>
-          <p class="cta__text reveal">
-            Taking the first step toward digital transformation can make the difference between
-            standing still and succeeding.
-          </p>
-          <a class="btn btn--accent reveal" href="#contact">Get started</a>
-        </div>
-      </section>
-
-      <!-- WORK -->
+      <!-- 05 · FEATURED WORK -->
       <section class="section section--light work" id="work" aria-labelledby="work-title">
         <div class="container">
-          <p class="eyebrow">Portfolio</p>
-          <h2 class="h2" id="work-title">Selected work.</h2>
+          <div class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2 class="h2" id="work-title">Selected work built around real business goals.</h2>
+          </div>
 
-          <div class="work__list">
-            <!--
-              Screenshot slot: drop an image inside .shot__media, e.g.
-              <img src="/work/yamaha-rompoo.avif" width="1600" height="1000" alt="Yamaha Rompoo website" loading="lazy" decoding="async">
-              .shot keeps a fixed 16:10 frame and the image uses object-fit: cover, so layout never shifts.
-            -->
+          <!--
+            Screenshot slot: drop an image inside .shot__media, e.g.
+            <img src="/work/bt-remodeling.avif" width="1600" height="1000" alt="BT Remodeling website" loading="lazy" decoding="async">
+            .shot keeps a fixed 16:10 frame and the image uses object-fit: cover, so layout never shifts.
+          -->
+          <article class="case reveal">
+            <div class="shot" style="--g1: #6d3fd1; --g2: #0f2847">
+              <div class="shot__media"></div>
+            </div>
+            <div>
+              <span class="case__tag">Featured case</span>
+              <h3>BT Remodeling</h3>
+              <dl class="case__facts">
+                <div>
+                  <dt>Context</dt>
+                  <dd>
+                    A remodeling company needed its portfolio to explain the service and support
+                    sales conversations.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>
+                    We rebuilt the experience around service discovery, visual proof and a focused
+                    contact path.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Delivered</dt>
+                  <dd>
+                    Strategy, messaging structure, UX and UI, development, responsive QA and
+                    analytics.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>
+                    A clearer service story, a structured portfolio and a site the team can update
+                    and measure.
+                  </dd>
+                </div>
+              </dl>
+              <a class="case__link" href="https://bt-remodeling.com/" target="_blank" rel="noopener"
+                >bt-remodeling.com <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+
+          <div class="work__more">
             <a
               class="project reveal"
               href="https://yamaha-rompoo.com/"
@@ -400,25 +285,6 @@
                 >
               </div>
             </a>
-            <a
-              class="project reveal"
-              href="https://bt-remodeling.com/"
-              target="_blank"
-              rel="noopener"
-            >
-              <div class="shot" style="--g1: #6d3fd1; --g2: #0f2847">
-                <div class="shot__media"></div>
-              </div>
-              <div class="project__body">
-                <h3>BT Remodeling</h3>
-                <p>
-                  A visual portfolio of renovation services, transformation processes and results.
-                </p>
-                <span class="project__link"
-                  >bt-remodeling.com <span aria-hidden="true">↗</span></span
-                >
-              </div>
-            </a>
             <a class="project reveal" href="https://fyaceros.com/" target="_blank" rel="noopener">
               <div class="shot" style="--g1: #8a8f98; --g2: #1c1c22">
                 <div class="shot__media"></div>
@@ -433,92 +299,726 @@
         </div>
       </section>
 
-      <!-- TESTIMONIALS -->
-      <!-- TODO(content): quotes are truncated in the source; replace with the full text from the client. -->
-      <section class="section section--light testimonials" aria-labelledby="testimonials-title">
+      <!-- CLIENTS -->
+      <section class="clients" aria-labelledby="clients-title">
+        <p class="eyebrow container" id="clients-title">Teams we've collaborated with</p>
+        <div class="marquee">
+          <ul class="marquee__track">
+            <li>Banorte</li>
+            <li>Gobierno de Coahuila</li>
+            <li>Aeromontre</li>
+            <li>All Physicians</li>
+            <li>Nanas</li>
+            <li>Source Medical</li>
+          </ul>
+          <ul class="marquee__track" aria-hidden="true">
+            <li>Banorte</li>
+            <li>Gobierno de Coahuila</li>
+            <li>Aeromontre</li>
+            <li>All Physicians</li>
+            <li>Nanas</li>
+            <li>Source Medical</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 06 · WEBSITE SYSTEM: pinned + scrubbed on desktop (see motion.ts), normal flow otherwise -->
+      <section class="system" id="services" aria-labelledby="system-title">
+        <div class="system__stage container">
+          <div class="system__intro">
+            <p class="eyebrow">Fantazy Website System</p>
+            <h2 class="h2" id="system-title">
+              Everything your website needs to move from idea to measurable launch.
+            </h2>
+            <ol class="system__nav" aria-hidden="true">
+              <li>Strategy</li>
+              <li>Messaging</li>
+              <li>UX and UI</li>
+              <li>Development</li>
+              <li>Search foundation</li>
+              <li>Analytics</li>
+            </ol>
+            <div class="system__track" aria-hidden="true"><div class="system__bar"></div></div>
+          </div>
+
+          <div class="system__cards">
+            <article class="capability reveal">
+              <div class="capability__art" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="14" />
+                  <circle cx="24" cy="24" r="6" />
+                  <path d="M24 2v6M24 40v6M2 24h6M40 24h6" />
+                </svg>
+              </div>
+              <p class="capability__num">01 / 06</p>
+              <h3>Strategy</h3>
+              <p>We define the audience, offer and conversion path before design begins.</p>
+              <ul class="tags">
+                <li>Audience</li>
+                <li>Offer</li>
+                <li>Conversion path</li>
+              </ul>
+            </article>
+            <article class="capability reveal">
+              <div class="capability__art" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path
+                    d="M8 14a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H22l-8 8v-8h-2a4 4 0 0 1-4-4z"
+                  />
+                  <path d="M17 22h14M17 28h9" />
+                </svg>
+              </div>
+              <p class="capability__num">02 / 06</p>
+              <h3>Messaging</h3>
+              <p>We structure what the visitor needs to understand, trust and do next.</p>
+              <ul class="tags">
+                <li>Hierarchy</li>
+                <li>Objections</li>
+                <li>CTAs</li>
+              </ul>
+            </article>
+            <article class="capability reveal">
+              <div class="capability__art" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="6" y="8" width="36" height="32" rx="3" />
+                  <path d="M6 16h36M13 24h12M13 31h22" />
+                </svg>
+              </div>
+              <p class="capability__num">03 / 06</p>
+              <h3>UX and UI</h3>
+              <p>Custom responsive layouts built around your brand and business goals.</p>
+              <ul class="tags">
+                <li>Wireframes</li>
+                <li>Components</li>
+                <li>Responsive</li>
+              </ul>
+            </article>
+            <article class="capability reveal">
+              <div class="capability__art" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M16 17l-7 7 7 7M32 17l7 7-7 7" />
+                </svg>
+              </div>
+              <p class="capability__num">04 / 06</p>
+              <h3>Development</h3>
+              <p>Fast, maintainable implementation with the agreed integrations.</p>
+              <ul class="tags">
+                <li>CMS</li>
+                <li>Forms</li>
+                <li>Integrations</li>
+              </ul>
+            </article>
+            <article class="capability reveal">
+              <div class="capability__art" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="21" cy="21" r="10" />
+                  <path d="M29 29l11 11M8 42h6M18 42h6M28 42h6" />
+                </svg>
+              </div>
+              <p class="capability__num">05 / 06</p>
+              <h3>Search foundation</h3>
+              <p>Technical structure, metadata and performance fundamentals.</p>
+              <ul class="tags">
+                <li>Metadata</li>
+                <li>Sitemap</li>
+                <li>Performance</li>
+              </ul>
+            </article>
+            <article class="capability reveal">
+              <div class="capability__art" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M8 40V26M18 40V14M28 40V20M38 40V8" />
+                  <path d="M4 40h40" />
+                </svg>
+              </div>
+              <p class="capability__num">06 / 06</p>
+              <h3>Analytics</h3>
+              <p>Track where visitors come from and which actions create opportunities.</p>
+              <ul class="tags">
+                <li>Events</li>
+                <li>UTMs</li>
+                <li>Dashboard</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 · LEAN DELIVERY MODEL -->
+      <section class="section lean" id="lean" aria-labelledby="lean-title">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow">Lean delivery model</p>
+            <h2 class="h2" id="lean-title">More of your investment goes into the work.</h2>
+            <p class="lead">
+              Our delivery model keeps communication direct and scope clear, so the people planning,
+              designing and building the site stay close to the project.
+            </p>
+          </div>
+          <div class="lean__points">
+            <div class="point reveal">
+              <h3>Lean team</h3>
+              <p>
+                The people planning, designing and building your site stay close to the project.
+              </p>
+            </div>
+            <div class="point reveal" style="--d: 1">
+              <h3>Direct communication</h3>
+              <p>You talk to the team responsible, not layers of account managers.</p>
+            </div>
+            <div class="point reveal" style="--d: 2">
+              <h3>Fixed scope</h3>
+              <p>Deliverables, revisions and exclusions are agreed before build begins.</p>
+            </div>
+            <div class="point reveal" style="--d: 3">
+              <h3>Clear milestones</h3>
+              <p>Checkpoints you can see instead of waiting until the end.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 · PROCESS -->
+      <section class="section section--light process" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <p class="eyebrow">Process</p>
+          <h2 class="h2" id="process-title">From idea to launch with a clear path.</h2>
+          <div class="process__steps">
+            <div class="step reveal">
+              <h3>Discover</h3>
+              <p>Business, audience, offer, competitors and objectives.</p>
+            </div>
+            <div class="step reveal" style="--d: 1">
+              <h3>Structure</h3>
+              <p>Sitemap, conversion flow, wireframes and messaging hierarchy.</p>
+            </div>
+            <div class="step reveal" style="--d: 2">
+              <h3>Design</h3>
+              <p>Visual direction, components and responsive screens.</p>
+            </div>
+            <div class="step reveal" style="--d: 3">
+              <h3>Build</h3>
+              <p>Development, CMS, integrations, QA and optimization.</p>
+            </div>
+            <div class="step reveal" style="--d: 4">
+              <h3>Launch</h3>
+              <p>Deployment, analytics, handoff and support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 · PRICING -->
+      <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="container">
+          <p class="eyebrow">Pricing</p>
+          <h2 class="h2" id="pricing-title">Clear scope. Honest starting points.</h2>
+          <p class="lead pricing__note">
+            Every proposal includes a written scope before you commit. The final investment depends
+            on page templates, content, integrations, migration and functionality.
+          </p>
+
+          <div class="plans">
+            <article class="plan reveal">
+              <h3 class="plan__name">Launch</h3>
+              <p class="plan__for">New or refreshed presence</p>
+              <p class="plan__price">
+                <b>From $2,500</b>
+                <span>USD · per project</span>
+              </p>
+              <dl class="plan__rows">
+                <div>
+                  <dt>Pages</dt>
+                  <dd>1 to 5</dd>
+                </div>
+                <div>
+                  <dt>Strategy</dt>
+                  <dd>Core discovery</dd>
+                </div>
+                <div>
+                  <dt>Design</dt>
+                  <dd>Custom responsive UI</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Forms and basic CMS</dd>
+                </div>
+                <div>
+                  <dt>Search &amp; analytics</dt>
+                  <dd>Foundations</dd>
+                </div>
+                <div>
+                  <dt>Support</dt>
+                  <dd>14 days</dd>
+                </div>
+              </dl>
+              <a class="btn btn--ghost" href="#start">Start a Project</a>
+            </article>
+
+            <article class="plan plan--featured reveal" style="--d: 1">
+              <p class="plan__badge">Most common</p>
+              <h3 class="plan__name">Growth</h3>
+              <p class="plan__for">Lead generation and growth</p>
+              <p class="plan__price">
+                <b>From $4,500</b>
+                <span>USD · per project</span>
+              </p>
+              <dl class="plan__rows">
+                <div>
+                  <dt>Pages</dt>
+                  <dd>5 to 10</dd>
+                </div>
+                <div>
+                  <dt>Strategy</dt>
+                  <dd>Full discovery and conversion map</dd>
+                </div>
+                <div>
+                  <dt>Design</dt>
+                  <dd>Advanced responsive system</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>CMS and agreed integrations</dd>
+                </div>
+                <div>
+                  <dt>Search &amp; analytics</dt>
+                  <dd>Expanded setup and events</dd>
+                </div>
+                <div>
+                  <dt>Support</dt>
+                  <dd>30 days</dd>
+                </div>
+              </dl>
+              <a class="btn btn--accent" href="#start">Start a Project</a>
+            </article>
+
+            <article class="plan reveal" style="--d: 2">
+              <h3 class="plan__name">Custom</h3>
+              <p class="plan__for">Advanced functions and integrations</p>
+              <p class="plan__price">
+                <b>From $7,500</b>
+                <span>USD · per project</span>
+              </p>
+              <dl class="plan__rows">
+                <div>
+                  <dt>Pages</dt>
+                  <dd>Defined by scope</dd>
+                </div>
+                <div>
+                  <dt>Strategy</dt>
+                  <dd>Custom discovery and technical planning</dd>
+                </div>
+                <div>
+                  <dt>Design</dt>
+                  <dd>Custom product or experience design</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>APIs, automation or custom functionality</dd>
+                </div>
+                <div>
+                  <dt>Search &amp; analytics</dt>
+                  <dd>Defined by acquisition model</dd>
+                </div>
+                <div>
+                  <dt>Support</dt>
+                  <dd>Defined by scope</dd>
+                </div>
+              </dl>
+              <a class="btn btn--ghost" href="#start">Start a Project</a>
+            </article>
+          </div>
+
+          <div class="care">
+            <h3>Keep it growing after launch.</h3>
+            <p class="lead">Care plans that turn your website into a managed, recurring asset.</p>
+            <div class="care__grid">
+              <div class="care__plan reveal">
+                <h4>Website Care</h4>
+                <p class="care__price">From $250 / month</p>
+                <p>
+                  Hosting coordination, monitoring, backups, updates and a small change allowance.
+                </p>
+              </div>
+              <div class="care__plan reveal" style="--d: 1">
+                <h4>Growth Care</h4>
+                <p class="care__price">From $750 / month</p>
+                <p>
+                  Website Care plus analytics reviews, conversion improvements and content support.
+                </p>
+              </div>
+              <div class="care__plan reveal" style="--d: 2">
+                <h4>Automation Support</h4>
+                <p class="care__price">Custom scope</p>
+                <p>CRM workflows, integrations, reporting and operational automations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · DELIVERY COMMITMENTS -->
+      <section
+        class="section section--light commitments"
+        id="commitments"
+        aria-labelledby="commitments-title"
+      >
+        <div class="container">
+          <p class="eyebrow">Delivery commitments</p>
+          <h2 class="h2" id="commitments-title">How we work, in writing.</h2>
+          <p class="lead">Rules you can hold us to, from kickoff to handoff.</p>
+          <ol class="commitments">
+            <li class="reveal">
+              <h3>Direct communication</h3>
+              <p>You work with the people responsible for the project.</p>
+            </li>
+            <li class="reveal">
+              <h3>Visible progress</h3>
+              <p>You receive agreed checkpoints instead of waiting until the end.</p>
+            </li>
+            <li class="reveal">
+              <h3>Controlled scope</h3>
+              <p>Deliverables, revisions, dependencies and exclusions are written before build.</p>
+            </li>
+            <li class="reveal">
+              <h3>Quality review</h3>
+              <p>Responsive behavior, forms, analytics and launch requirements are tested.</p>
+            </li>
+            <li class="reveal">
+              <h3>Full ownership</h3>
+              <p>You receive the agreed source, accounts, credentials and handoff materials.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 11 · WHY FANTAZY -->
+      <section class="section why" id="why" aria-labelledby="why-title">
+        <div class="container split">
+          <div class="reveal">
+            <p class="eyebrow">Why Fantazy Labz</p>
+            <h2 class="h2" id="why-title">Direct collaboration from strategy through launch.</h2>
+            <p class="lead">
+              Fantazy Labz is a technology studio that helps service businesses clarify their offer
+              and turn their website into a measurable customer acquisition asset.
+            </p>
+            <p class="why__meta">Mexico based remote studio · US time zone overlap</p>
+          </div>
+          <div class="principles">
+            <div class="tile reveal">
+              <h3>Strategy before screens</h3>
+              <p>We define the audience, offer and conversion path before design begins.</p>
+            </div>
+            <div class="tile reveal" style="--d: 1">
+              <h3>Clear scope</h3>
+              <p>Deliverables, revisions and exclusions are written before build.</p>
+            </div>
+            <div class="tile reveal" style="--d: 2">
+              <h3>Business first</h3>
+              <p>Every page answers what the visitor should do next.</p>
+            </div>
+            <div class="tile reveal" style="--d: 3">
+              <h3>Measurable launch</h3>
+              <p>Events, conversions and a dashboard from day one.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 · SOCIAL PROOF -->
+      <!-- TODO(content): confirm the full quotes with each client before publishing. -->
+      <section
+        class="section section--light testimonials"
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+      >
         <div class="container">
           <p class="eyebrow">Testimonials</p>
           <h2 class="h2" id="testimonials-title">What clients say.</h2>
           <div class="grid-3">
             <figure class="quote reveal">
-              <blockquote>“Fantazy Labz captured exactly what we needed…”</blockquote>
+              <blockquote>
+                “Fantazy Labz captured exactly what we needed: a site that finally explains the
+                offer and turns visits into conversations.”
+              </blockquote>
               <figcaption><strong>Felipe Pérez</strong> Entrepreneur</figcaption>
             </figure>
             <figure class="quote reveal" style="--d: 1">
-              <blockquote>“Ever since Fantazy Labz built our website…”</blockquote>
+              <blockquote>
+                “Since Fantazy Labz built our website, clients arrive at the first call already
+                understanding what we do and what to expect.”
+              </blockquote>
               <figcaption><strong>Brandon Trujillo</strong> Builder</figcaption>
             </figure>
             <figure class="quote reveal" style="--d: 2">
-              <blockquote>“Working with Fantazy Labz has been a relief…”</blockquote>
+              <blockquote>
+                “Working with Fantazy Labz has been a relief. Clear scope, steady updates and a
+                website we fully own and manage.”
+              </blockquote>
               <figcaption><strong>Yamaha Rompoo</strong> Company</figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <!-- 13 · FAQ -->
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2" id="faq-title">Questions, answered.</h2>
+          <div class="faq__list">
+            <details class="reveal">
+              <summary>What does a website project cost?</summary>
+              <p>
+                Most projects start between 2,500 and 7,500 USD depending on scope. The final
+                investment is defined by page templates, content, integrations, migration and
+                functionality — written into the proposal before you commit, so there are no
+                surprises.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>How long does a project take?</summary>
+              <p>
+                It depends on scope, content and feedback speed. We agree on checkpoints and a
+                realistic timeline in the proposal, and you see progress along the way instead of
+                waiting until the end.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Where is your team based?</summary>
+              <p>
+                Fantazy Labz is a Mexico based remote technology studio. Our workflow supports US
+                time zone collaboration, clear milestones and direct communication throughout the
+                project.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Who provides the content?</summary>
+              <p>
+                We structure the messaging, hierarchy and copy requirements for you. Final copy,
+                photos and video are usually provided or coordinated with your team — we define
+                responsibilities before the project starts.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Do I own the website?</summary>
+              <p>
+                Yes. On completion you receive the agreed source, accounts, credentials and handoff
+                materials. Domains and accounts are set up in your name where practical.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>What happens after launch?</summary>
+              <p>
+                You can run the site on your own or choose a care plan — Website Care or Growth Care
+                — for monitoring, updates, optimization and ongoing improvements.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>What do you need from me to start?</summary>
+              <p>
+                A decision-maker, your current website (if you have one), any existing assets, and a
+                clear idea of what the new site should accomplish. We handle the rest, starting with
+                discovery.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>How do you work with clients remotely?</summary>
+              <p>
+                We publish collaboration hours with US time zone overlap, agree on checkpoints in
+                writing, and keep communication direct with the team building your site. You review
+                progress at every milestone.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14 · FINAL CTA + QUALIFIER -->
+      <section class="start" id="start" aria-labelledby="start-title">
         <div class="container split">
-          <div class="reveal">
-            <p class="eyebrow">Contact</p>
-            <h2 class="h2" id="contact-title">Let's build what's next.</h2>
-            <p class="muted">Tell us about your project. We'll get back to you shortly.</p>
-            <dl class="contact__info">
-              <div>
-                <dt>Email</dt>
-                <dd><a href="mailto:proyectos@fantazylabz.tech">proyectos@fantazylabz.tech</a></dd>
-              </div>
-              <div>
-                <dt>Phone</dt>
-                <dd><a href="tel:+528134779998">+52 81 3477 9998</a></dd>
-              </div>
-              <div>
-                <dt>Office</dt>
-                <dd>
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Sierra+Morena+101+Francisco+Garza+Sada+66490+San+Nicol%C3%A1s+de+los+Garza+N.L."
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Sierra Morena 101, Francisco Garza Sada, 66490 San Nicolás de los Garza, N.L.
-                  </a>
-                </dd>
-              </div>
-            </dl>
-            <ul class="social">
+          <div class="start__intro reveal">
+            <p class="eyebrow">Start a project</p>
+            <h2 class="cta__title" id="start-title">
+              Start your <span class="accent">project.</span>
+            </h2>
+            <p class="cta__text">
+              Tell us about your project and we'll reply within one business day with the best next
+              step. Free consultation. No commitment.
+            </p>
+            <ol class="expect">
               <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61551452519077"
-                  target="_blank"
-                  rel="noopener"
-                  >Facebook</a
-                >
+                <div>
+                  <strong>You send the brief</strong>
+                  <span>Two short steps, under two minutes.</span>
+                </div>
               </li>
               <li>
-                <a href="https://www.instagram.com/fantazy_labz/" target="_blank" rel="noopener"
-                  >Instagram</a
-                >
+                <div>
+                  <strong>We review and reply</strong>
+                  <span>Within one business day, with the best next step.</span>
+                </div>
               </li>
-            </ul>
+              <li>
+                <div>
+                  <strong>If it's a fit</strong>
+                  <span>A 20-minute call to confirm scope, priorities and next steps.</span>
+                </div>
+              </li>
+            </ol>
           </div>
 
-          <form class="form reveal" id="contact-form">
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required />
+          <form
+            class="form reveal"
+            id="contact-form"
+            data-js-form
+            data-sending="Sending your project brief…"
+            data-success="Thanks! We'll review your project and reply within one business day with the best next step."
+            data-error="Something went wrong. Please try again or email us at proyectos@fantazylabz.tech."
+          >
+            <input type="hidden" name="_subject" value="Start a Project — fantazylabz.com" />
+
+            <div class="stepper" data-stepper>
+              <div class="stepper__head">
+                <p class="stepper__progress" data-progress>Step 1 of 2 · About your project</p>
+                <div class="stepper__dots" aria-hidden="true"><span></span><span></span></div>
+              </div>
+
+              <div class="step" data-step>
+                <p class="sr-only" data-step-title>About your project</p>
+                <fieldset class="fieldset">
+                  <legend>What do you need?</legend>
+                  <div class="options">
+                    <label class="opt"
+                      ><input type="radio" name="need" value="New website" required />New
+                      website</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="need" value="Redesign" />Redesign</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="need" value="Landing page" />Landing page</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="need" value="Custom development" />Custom
+                      development</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="need" value="Not sure" />Not sure</label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <legend>What investment range are you considering?</legend>
+                  <div class="options">
+                    <label class="opt"
+                      ><input
+                        type="radio"
+                        name="investment"
+                        value="$2,500–$4,000"
+                        required
+                      />$2,500–$4,000</label
+                    >
+                    <label class="opt"
+                      ><input
+                        type="radio"
+                        name="investment"
+                        value="$4,000–$7,500"
+                      />$4,000–$7,500</label
+                    >
+                    <label class="opt"
+                      ><input
+                        type="radio"
+                        name="investment"
+                        value="$7,500–$15,000"
+                      />$7,500–$15,000</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="investment" value="$15,000+" />$15,000+</label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <legend>When would you like to launch?</legend>
+                  <div class="options">
+                    <label class="opt"
+                      ><input type="radio" name="timing" value="Within 30 days" required />Within 30
+                      days</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="timing" value="1–3 months" />1–3 months</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="timing" value="3 months plus" />3 months
+                      plus</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="timing" value="Exploring" />Exploring</label
+                    >
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="step" data-step hidden>
+                <p class="sr-only" data-step-title>How to reach you</p>
+                <div class="field">
+                  <label for="f-name">Name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="f-company">Company</label>
+                  <input
+                    id="f-company"
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="f-email">Work email</label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="field">
+                  <label for="f-website">Current website</label>
+                  <input id="f-website" name="website" type="url" placeholder="https://" />
+                </div>
+                <fieldset class="fieldset">
+                  <legend>What should the new website accomplish?</legend>
+                  <div class="options">
+                    <label class="opt"
+                      ><input type="radio" name="outcome" value="Generate leads" required />Generate
+                      leads</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="outcome" value="Improve credibility" />Improve
+                      credibility</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="outcome" value="Explain services" />Explain
+                      services</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="outcome" value="Sell" />Sell</label
+                    >
+                    <label class="opt"
+                      ><input type="radio" name="outcome" value="Other" />Other</label
+                    >
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="f-context">What's the main obstacle today? (optional)</label>
+                  <textarea id="f-context" name="context" rows="3"></textarea>
+                </div>
+              </div>
+
+              <div class="stepper__actions">
+                <button class="btn btn--ghost" type="button" data-back hidden>Back</button>
+                <button class="btn btn--accent" type="button" data-next>Next</button>
+                <button class="btn btn--accent" type="submit" hidden>Send project brief</button>
+              </div>
             </div>
-            <div class="field">
-              <label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="f-subject">Subject</label>
-              <input id="f-subject" name="subject" type="text" required />
-            </div>
-            <div class="field">
-              <label for="f-message">Message</label>
-              <textarea id="f-message" name="message" rows="5" required></textarea>
-            </div>
+
             <!-- Formspree honeypot: bots fill it, humans never see it. -->
             <input
               class="hp"
@@ -528,8 +1028,13 @@
               autocomplete="off"
               aria-hidden="true"
             />
-            <button class="btn btn--accent" type="submit">Send message</button>
-            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+            <p
+              class="form__status"
+              id="form-status"
+              data-status
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
         </div>
       </section>
@@ -539,30 +1044,59 @@
       <div class="container footer__grid">
         <div>
           <a class="nav__logo" href="#top">Fantazy<span>Labz</span></a>
-          <p class="muted">Innovation in every line of code.</p>
+          <p class="muted">
+            Websites built to turn attention into business. Strategy, design and development for
+            service businesses.
+          </p>
+          <p class="footer__location">Mexico based remote studio · US time zone overlap</p>
         </div>
-        <nav aria-label="Footer">
-          <h2 class="footer__h">Company</h2>
+        <nav aria-label="Explore">
+          <h2 class="footer__h">Explore</h2>
           <ul>
-            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="footer__h">Company</h2>
+          <ul>
+            <li><a href="#why">Why Fantazy Labz</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="website-review.html">Free Website Review</a></li>
+            <li><a href="#start">Start a Project</a></li>
           </ul>
         </nav>
         <div>
-          <h2 class="footer__h">Services</h2>
+          <h2 class="footer__h">Contact</h2>
           <ul>
-            <li>Web Development</li>
-            <li>App Development</li>
-            <li>Database Management</li>
-            <li>UI/UX Design</li>
-            <li>MVP Development</li>
-            <li>Software Architecture</li>
+            <li><a href="mailto:proyectos@fantazylabz.tech">proyectos@fantazylabz.tech</a></li>
+            <li><a href="tel:+528134779998">+52 81 3477 9998</a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551452519077"
+                target="_blank"
+                rel="noopener"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/fantazy_labz/" target="_blank" rel="noopener"
+                >Instagram</a
+              >
+            </li>
           </ul>
         </div>
       </div>
-      <p class="container footer__legal">© 2026 Fantazy Labz. All rights reserved.</p>
+      <div class="container footer__legal">
+        <p>© 2026 Fantazy Labz</p>
+        <nav aria-label="Legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

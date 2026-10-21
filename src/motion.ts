@@ -19,8 +19,8 @@ export function initMotion() {
       heroOut();
       highlight();
       // Pin + normalizeScroll only on desktop; mobile keeps native scrolling and normal flow.
-      const unpin = desktop ? servicesPin() : undefined;
-      if (desktop) ScrollTrigger.normalizeScroll(true);
+      const unpin = desktop ? systemPin() : undefined;
+      if (desktop && unpin) ScrollTrigger.normalizeScroll(true);
       ctaIn();
       parallax();
 
@@ -57,12 +57,14 @@ function splitHighlight() {
 }
 
 function heroOut() {
+  if (!document.querySelector('.hero')) return;
   const scrollTrigger = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
   gsap.to('.hero__inner', { yPercent: 18, scale: 0.94, opacity: 0, ease: 'none', scrollTrigger });
   gsap.to('.hero__glow', { scale: 1.35, opacity: 0.4, ease: 'none', scrollTrigger });
 }
 
 function highlight() {
+  if (!document.querySelector('.hl-w')) return;
   gsap.fromTo(
     '.hl-w',
     { opacity: 0.4 }, // dimmed words stay ≥3:1 on #060606 (AA large text)
@@ -76,15 +78,17 @@ function highlight() {
 }
 
 function ctaIn() {
+  const title = document.querySelector('.cta__title');
+  if (!title) return;
   gsap.fromTo(
-    '.cta__title',
+    title,
     { scale: 0.82, opacity: 0.2, y: 60 },
     {
       scale: 1,
       opacity: 1,
       y: 0,
       ease: 'none',
-      scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'center 55%', scrub: true },
+      scrollTrigger: { trigger: title, start: 'top bottom', end: 'center 55%', scrub: true },
     },
   );
 }
@@ -104,11 +108,12 @@ function parallax() {
   });
 }
 
-/** Apple-style pinned services: list advances on the left, cards crossfade on the right. */
-function servicesPin() {
-  const section = document.querySelector<HTMLElement>('.services')!;
-  const cards = gsap.utils.toArray<HTMLElement>('.service', section);
-  const items = gsap.utils.toArray<HTMLElement>('.services__nav li', section);
+/** Apple-style pinned website system: list advances on the left, cards crossfade on the right. */
+function systemPin() {
+  const section = document.querySelector<HTMLElement>('.system');
+  if (!section) return;
+  const cards = gsap.utils.toArray<HTMLElement>('.capability', section);
+  const items = gsap.utils.toArray<HTMLElement>('.system__nav li', section);
   section.classList.add('has-pin');
 
   gsap.set(cards.slice(1), { opacity: 0, y: 80 });
@@ -117,7 +122,7 @@ function servicesPin() {
   const tl = gsap.timeline({
     defaults: { duration: 1, ease: 'power2.inOut' },
     scrollTrigger: {
-      trigger: section.querySelector('.services__stage'),
+      trigger: section.querySelector('.system__stage'),
       start: 'top top',
       end: () => `+=${(cards.length - 1) * window.innerHeight * 0.75}`,
       pin: true,
@@ -136,7 +141,7 @@ function servicesPin() {
       .addLabel(`s${i}`);
   }
   tl.fromTo(
-    section.querySelector('.services__bar'),
+    section.querySelector('.system__bar'),
     { scaleY: 1 / cards.length },
     { scaleY: 1, ease: 'none', duration: tl.duration() },
     0,

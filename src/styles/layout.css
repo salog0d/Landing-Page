@@ -20,7 +20,8 @@
 }
 
 .section--light .muted,
-.section--light .eyebrow {
+.section--light .eyebrow,
+.section--light .lead {
   color: var(--ink-body);
 }
 

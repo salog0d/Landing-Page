@@ -336,6 +336,46 @@
   animation: fade-up 1s var(--ease-out) 0.9s both;
 }
 
+/* Two-column hero (≥1024px): copy left, animated mock right — visible above the fold. */
+@media (min-width: 1024px) {
+  .hero--split .hero__inner {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    gap: clamp(48px, 6vw, 96px);
+    text-align: left;
+  }
+
+  .hero--split .eyebrow {
+    justify-content: flex-start;
+  }
+
+  .hero--split .hero__title {
+    max-width: 14ch;
+    margin-inline: 0;
+    font-size: clamp(2.5rem, 4.6vw, 4.25rem);
+  }
+
+  .hero--split .hero__lead {
+    margin: 24px 0 0;
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  }
+
+  .hero--split .hero__actions {
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+
+  .hero--split .hero__risk {
+    margin-top: 20px;
+  }
+
+  .hero--split .hero__visual {
+    margin: 0;
+    animation: fade-up 1s var(--ease-out) 0.85s both;
+  }
+}
+
 /* Short hero for subpages (review). */
 .hero--page {
   min-height: auto;

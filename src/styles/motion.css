@@ -1,0 +1,78 @@
+/* Every animation here touches transform/opacity only (compositor-friendly). */
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity 1s var(--ease-out),
+    transform 1s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 90ms);
+}
+
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes word-in {
+  from {
+    transform: translateY(110%);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Static client list instead of a moving marquee. */
+  .marquee {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .marquee__track {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: center;
+    row-gap: 12px;
+    width: 100%;
+    padding-inline: var(--gutter);
+    animation: none !important;
+  }
+
+  .marquee__track[aria-hidden='true'] {
+    display: none;
+  }
+}

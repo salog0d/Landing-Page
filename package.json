@@ -1,0 +1,31 @@
+{
+  "name": "fantazy-labz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "og": "node scripts/og.mjs",
+    "test": "node tests/check.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/raleway": "^5.3.0",
+    "@fontsource-variable/roboto": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "playwright": "^1.63.0",
+    "prettier": "^3.9.7",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.0",
+    "vite": "^8.3.0"
+  }
+}

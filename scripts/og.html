@@ -1,0 +1,89 @@
+<!doctype html>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: Raleway;
+    src: url('../node_modules/@fontsource-variable/raleway/files/raleway-latin-wght-normal.woff2');
+    font-weight: 100 900;
+  }
+  @font-face {
+    font-family: Poppins;
+    src: url('../node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2');
+    font-weight: 600;
+  }
+  html,
+  body {
+    margin: 0;
+  }
+  body {
+    width: 1200px;
+    height: 630px;
+    box-sizing: border-box;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #060606;
+    color: #f5f5f7;
+    font-family: Raleway, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 80% at 80% 60%, #000, transparent 75%);
+  }
+  body::after {
+    content: '';
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    right: -300px;
+    bottom: -420px;
+    border-radius: 50%;
+    background: radial-gradient(
+      closest-side,
+      rgb(207 99 206 / 0.55),
+      rgb(207 99 206 / 0.12) 55%,
+      transparent
+    );
+  }
+  * {
+    position: relative;
+    z-index: 1;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+  }
+  .logo span,
+  .accent {
+    color: #cf63ce;
+  }
+  h1 {
+    margin: 0;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    max-width: 12ch;
+  }
+  .meta {
+    font:
+      600 22px Poppins,
+      sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a1a1a6;
+  }
+</style>
+<div class="logo">Fantazy<span>Labz</span></div>
+<h1>Innovation in every line of <span class="accent">code.</span></h1>
+<div class="meta">Software consulting · Monterrey, MX</div>

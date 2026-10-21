@@ -216,3 +216,17 @@ La página se reconstruyó siguiendo `Estrategia_comercial_one_pager_Fantazy_Lab
 - **Confianza transfronteriza:** FAQ con "Mexico based remote technology studio… US time zone collaboration"; compromisos de entrega por escrito; privacy y terms publicados.
 - **Medición:** formulario con `_subject` por tipo de lead; quedan pendientes eventos, UTMs, CRM y tablero comercial (siguiente fase).
 - **Pendientes siguientes:** páginas por vertical para campañas/outbound, confirmar testimonios, revisar textos legales y validar precios contra margen real.
+
+---
+
+## 14. Densidad visual (oct-2026)
+
+Referencia: whoop.com/mx/en (scraping de su estructura). Patrones adoptados para eliminar el "espacio vacío":
+
+- **Hero con media tipo video**: mockup de navegador animado (escena del sitio convirtiendo) + chips flotantes con parallax ("Visitor arrives" → "One clear next step" → "Qualified lead").
+- **Transformation como before/after visual**: dos mockups de navegador (desordenado vs. estructurado) en lugar de solo listas de texto.
+- **Work con escenas por proyecto**: mockups temáticos dentro de cada frame del portafolio.
+- **Animación ambiental**: caret de escritura en la URL, shimmer en imágenes, pulse en chips/iconos, anillo pulsante en las capacidades — todo transform/opacity (regla del proyecto).
+- **Micro-enriquecimientos**: iconos en tiles del problema, iconos + chips de entregable en el proceso, chips "included" en pricing, avatares con iniciales en testimonios.
+
+Los mockups son placeholders: al tener screenshots/videos reales de clientes, se sustituyen 1:1 sin cambiar la estructura.

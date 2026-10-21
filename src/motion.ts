@@ -17,12 +17,14 @@ export function initMotion() {
 
       // Created top-to-bottom so triggers below the pin account for its spacer.
       heroOut();
+      heroChips();
       highlight();
       // Pin + normalizeScroll only on desktop; mobile keeps native scrolling and normal flow.
       const unpin = desktop ? systemPin() : undefined;
       if (desktop && unpin) ScrollTrigger.normalizeScroll(true);
       ctaIn();
       parallax();
+      mockReveal();
 
       return () => {
         if (!desktop) return;
@@ -61,6 +63,32 @@ function heroOut() {
   const scrollTrigger = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
   gsap.to('.hero__inner', { yPercent: 18, scale: 0.94, opacity: 0, ease: 'none', scrollTrigger });
   gsap.to('.hero__glow', { scale: 1.35, opacity: 0.4, ease: 'none', scrollTrigger });
+}
+
+/** Floating chips over the hero mock drift at different speeds while the hero scrolls out. */
+function heroChips() {
+  const chips = gsap.utils.toArray<HTMLElement>('.chip');
+  if (!chips.length) return;
+  const scrollTrigger = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+  chips.forEach((chip, i) => {
+    gsap.fromTo(chip, { y: 0 }, { y: i % 2 ? -32 : -56, ease: 'none', scrollTrigger });
+  });
+}
+
+/** Before/after mocks settle into place on scroll. */
+function mockReveal() {
+  gsap.utils.toArray<HTMLElement>('.transform__item .mock').forEach((mock) => {
+    gsap.fromTo(
+      mock,
+      { scale: 0.96, opacity: 0.55 },
+      {
+        scale: 1,
+        opacity: 1,
+        ease: 'none',
+        scrollTrigger: { trigger: mock, start: 'top 92%', end: 'top 40%', scrub: true },
+      },
+    );
+  });
 }
 
 function highlight() {

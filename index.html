@@ -124,6 +124,57 @@
             <a class="btn btn--ghost" href="#work">See Our Work</a>
           </div>
           <p class="hero__risk">Free project consultation · No commitment</p>
+
+          <!-- Whoop-style media: an animated site mockup that shows the promise in action -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="mock">
+              <div class="mock__bar">
+                <div class="mock__dots"><span></span><span></span><span></span></div>
+                <div class="mock__url">yourbusiness.com</div>
+              </div>
+              <div class="scene">
+                <div class="scene__nav">
+                  <span class="scene__logo"></span>
+                  <span class="bar" style="--w: 44px"></span>
+                  <span class="bar" style="--w: 44px"></span>
+                  <span class="bar" style="--w: 44px"></span>
+                  <span class="scene__cta">Get a quote</span>
+                </div>
+                <div class="scene__hero">
+                  <div class="scene__copy">
+                    <span class="bar bar--lg" style="--w: 84%"></span>
+                    <span class="bar bar--lg" style="--w: 58%"></span>
+                    <span class="bar bar--md" style="--w: 72%"></span>
+                    <span class="bar bar--md" style="--w: 64%"></span>
+                    <span class="scene__btn">Start your project</span>
+                  </div>
+                  <div class="scene__shot"></div>
+                </div>
+                <div class="scene__cards">
+                  <span class="scene__card"
+                    ><span class="bar" style="--w: 80%"></span
+                    ><span class="bar bar--dim" style="--w: 55%"></span
+                  ></span>
+                  <span class="scene__card"
+                    ><span class="bar" style="--w: 70%"></span
+                    ><span class="bar bar--dim" style="--w: 60%"></span
+                  ></span>
+                  <span class="scene__card"
+                    ><span class="bar" style="--w: 75%"></span
+                    ><span class="bar bar--dim" style="--w: 50%"></span
+                  ></span>
+                </div>
+                <div class="scene__form">
+                  <span class="bar" style="--w: 96px"></span>
+                  <span class="scene__input"></span>
+                  <span class="scene__btn">Send</span>
+                </div>
+              </div>
+            </div>
+            <span class="chip chip--visitor">Visitor arrives</span>
+            <span class="chip chip--step">One clear next step</span>
+            <span class="chip chip--lead">Qualified lead</span>
+          </div>
         </div>
       </section>
 
@@ -158,18 +209,43 @@
           </h2>
           <div class="problem__grid">
             <article class="tile reveal">
+              <div class="tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="26" r="12" />
+                  <path d="M24 20v6l4 3M14 8l2 4M34 8l-2 4M24 8v-3" />
+                </svg>
+              </div>
               <h3>It looks outdated</h3>
               <p>Your business evolved. Your website did not.</p>
             </article>
             <article class="tile reveal" style="--d: 1">
+              <div class="tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M6 38V14M18 38V22M30 38V10M42 38V26" />
+                  <path d="M18 22l12-12M30 10l12 16" />
+                </svg>
+              </div>
               <h3>It doesn't generate leads</h3>
               <p>Visitors arrive, look around and leave without a clear next step.</p>
             </article>
             <article class="tile reveal" style="--d: 2">
+              <div class="tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M28 8l6 6-13 13-6-6z" />
+                  <path d="M34 14l6 6M20 26l8 8-6 6-8-8" />
+                </svg>
+              </div>
               <h3>It's hard to manage</h3>
               <p>Every small update becomes another delay.</p>
             </article>
             <article class="tile reveal" style="--d: 3">
+              <div class="tile__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="15" />
+                  <path d="M31 13l4 4M33 30l-6 2 2-6z" />
+                  <path d="M24 14v4M14 24h4" />
+                </svg>
+              </div>
               <h3>It was built without strategy</h3>
               <p>Good visuals cannot replace a clear conversion path.</p>
             </article>
@@ -185,25 +261,104 @@
         <div class="container">
           <p class="eyebrow">The shift</p>
           <h2 class="h2" id="transform-title">From digital brochure to growth asset.</h2>
-          <div class="transform__panels">
-            <div class="panel panel--before reveal">
-              <h3>Before</h3>
-              <ul>
-                <li>Generic messaging that sounds like everyone else</li>
-                <li>Weak calls to action with no clear next step</li>
-                <li>Slow pages that leak visitors</li>
-                <li>No measurement: you can't see what works</li>
-              </ul>
-            </div>
-            <div class="panel panel--after reveal" style="--d: 1">
-              <h3>After</h3>
-              <ul>
-                <li>Clear positioning that explains your offer fast</li>
-                <li>Conversion structure that leads to one clear action</li>
-                <li>Responsive performance on every device</li>
-                <li>SEO foundations and analytics that show results</li>
-              </ul>
-            </div>
+
+          <div class="transform__grid">
+            <figure class="transform__item transform__item--before reveal">
+              <div class="mock mock--before" aria-hidden="true">
+                <div class="mock__bar">
+                  <div class="mock__dots"><span></span><span></span><span></span></div>
+                  <div class="mock__url">yourbusiness.com</div>
+                </div>
+                <div class="scene">
+                  <div class="scene__nav">
+                    <span class="bar" style="--w: 30px"></span>
+                    <span class="bar" style="--w: 52px"></span>
+                    <span class="bar" style="--w: 52px"></span>
+                    <span class="bar" style="--w: 40px"></span>
+                    <span class="scene__cta">Contact</span>
+                  </div>
+                  <div class="scene__hero">
+                    <div class="scene__copy">
+                      <span class="bar bar--lg" style="--w: 96%"></span>
+                      <span class="bar bar--lg" style="--w: 44%"></span>
+                      <span class="bar" style="--w: 90%"></span>
+                      <span class="bar" style="--w: 70%"></span>
+                      <span class="bar" style="--w: 78%"></span>
+                      <span class="bar" style="--w: 50%"></span>
+                      <span class="scene__btn">Learn more</span>
+                    </div>
+                    <div class="scene__shot"></div>
+                  </div>
+                  <div class="scene__form">
+                    <span class="bar" style="--w: 120px"></span>
+                    <span class="scene__input"></span>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <h3 class="transform__label">Before</h3>
+                <ul>
+                  <li>Generic messaging that sounds like everyone else</li>
+                  <li>Weak calls to action with no clear next step</li>
+                  <li>Slow pages that leak visitors</li>
+                  <li>No measurement: you can't see what works</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="transform__item transform__item--after reveal" style="--d: 1">
+              <div class="mock mock--after" aria-hidden="true">
+                <div class="mock__bar">
+                  <div class="mock__dots"><span></span><span></span><span></span></div>
+                  <div class="mock__url">yourbusiness.com</div>
+                </div>
+                <div class="scene">
+                  <div class="scene__nav">
+                    <span class="scene__logo"></span>
+                    <span class="bar" style="--w: 44px"></span>
+                    <span class="bar" style="--w: 44px"></span>
+                    <span class="scene__cta">Get a quote</span>
+                  </div>
+                  <div class="scene__hero">
+                    <div class="scene__copy">
+                      <span class="bar bar--lg" style="--w: 82%"></span>
+                      <span class="bar bar--lg bar--accent" style="--w: 56%"></span>
+                      <span class="bar" style="--w: 66%"></span>
+                      <span class="scene__btn">Start your project</span>
+                    </div>
+                    <div class="scene__shot"></div>
+                  </div>
+                  <div class="scene__cards">
+                    <span class="scene__card"
+                      ><span class="bar" style="--w: 80%"></span
+                      ><span class="bar bar--dim" style="--w: 55%"></span
+                    ></span>
+                    <span class="scene__card"
+                      ><span class="bar" style="--w: 70%"></span
+                      ><span class="bar bar--dim" style="--w: 60%"></span
+                    ></span>
+                    <span class="scene__card"
+                      ><span class="bar" style="--w: 75%"></span
+                      ><span class="bar bar--dim" style="--w: 50%"></span
+                    ></span>
+                  </div>
+                  <div class="scene__form">
+                    <span class="bar" style="--w: 96px"></span>
+                    <span class="scene__input"></span>
+                    <span class="scene__btn">Send</span>
+                  </div>
+                </div>
+              </div>
+              <figcaption>
+                <h3 class="transform__label">After</h3>
+                <ul>
+                  <li>Clear positioning that explains your offer fast</li>
+                  <li>Conversion structure that leads to one clear action</li>
+                  <li>Responsive performance on every device</li>
+                  <li>SEO foundations and analytics that show results</li>
+                </ul>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -217,13 +372,51 @@
           </div>
 
           <!--
-            Screenshot slot: drop an image inside .shot__media, e.g.
+            Screenshot slot: replace the scene inside .shot__media with a real screenshot, e.g.
             <img src="/work/bt-remodeling.avif" width="1600" height="1000" alt="BT Remodeling website" loading="lazy" decoding="async">
             .shot keeps a fixed 16:10 frame and the image uses object-fit: cover, so layout never shifts.
           -->
           <article class="case reveal">
             <div class="shot" style="--g1: #6d3fd1; --g2: #0f2847">
-              <div class="shot__media"></div>
+              <div class="shot__media" aria-hidden="true">
+                <div class="mock">
+                  <div class="mock__bar">
+                    <div class="mock__dots"><span></span><span></span><span></span></div>
+                    <div class="mock__url">bt-remodeling.com</div>
+                  </div>
+                  <div class="scene">
+                    <div class="scene__nav">
+                      <span class="scene__logo"></span>
+                      <span class="bar" style="--w: 48px"></span>
+                      <span class="bar" style="--w: 48px"></span>
+                      <span class="scene__cta">Free estimate</span>
+                    </div>
+                    <div class="scene__hero">
+                      <div class="scene__copy">
+                        <span class="bar bar--lg" style="--w: 88%"></span>
+                        <span class="bar bar--lg" style="--w: 52%"></span>
+                        <span class="bar bar--md" style="--w: 70%"></span>
+                        <span class="scene__btn">See our work</span>
+                      </div>
+                      <div class="scene__shot"></div>
+                    </div>
+                    <div class="scene__cards">
+                      <span class="scene__card"
+                        ><span class="bar" style="--w: 85%"></span
+                        ><span class="bar bar--dim" style="--w: 60%"></span
+                      ></span>
+                      <span class="scene__card"
+                        ><span class="bar" style="--w: 70%"></span
+                        ><span class="bar bar--dim" style="--w: 50%"></span
+                      ></span>
+                      <span class="scene__card"
+                        ><span class="bar" style="--w: 80%"></span
+                        ><span class="bar bar--dim" style="--w: 58%"></span
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div>
               <span class="case__tag">Featured case</span>
@@ -272,7 +465,48 @@
               rel="noopener"
             >
               <div class="shot" style="--g1: #cf63ce; --g2: #3a1a5c">
-                <div class="shot__media"></div>
+                <div class="shot__media" aria-hidden="true">
+                  <div class="mock">
+                    <div class="mock__bar">
+                      <div class="mock__dots"><span></span><span></span><span></span></div>
+                      <div class="mock__url">yamaha-rompoo.com</div>
+                    </div>
+                    <div class="scene">
+                      <div class="scene__nav">
+                        <span class="scene__logo"></span>
+                        <span class="bar" style="--w: 44px"></span>
+                        <span class="bar" style="--w: 44px"></span>
+                        <span class="scene__cta">Browse catalog</span>
+                      </div>
+                      <div class="scene__cards scene__cards--catalog">
+                        <span class="scene__card"
+                          ><span class="scene__shot scene__shot--square"></span
+                          ><span class="bar" style="--w: 80%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="scene__shot scene__shot--square"></span
+                          ><span class="bar" style="--w: 66%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="scene__shot scene__shot--square"></span
+                          ><span class="bar" style="--w: 74%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="scene__shot scene__shot--square"></span
+                          ><span class="bar" style="--w: 70%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="scene__shot scene__shot--square"></span
+                          ><span class="bar" style="--w: 82%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="scene__shot scene__shot--square"></span
+                          ><span class="bar" style="--w: 60%"></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="project__body">
                 <h3>Yamaha Rompoo</h3>
@@ -287,7 +521,44 @@
             </a>
             <a class="project reveal" href="https://fyaceros.com/" target="_blank" rel="noopener">
               <div class="shot" style="--g1: #8a8f98; --g2: #1c1c22">
-                <div class="shot__media"></div>
+                <div class="shot__media" aria-hidden="true">
+                  <div class="mock">
+                    <div class="mock__bar">
+                      <div class="mock__dots"><span></span><span></span><span></span></div>
+                      <div class="mock__url">fyaceros.com</div>
+                    </div>
+                    <div class="scene">
+                      <div class="scene__nav">
+                        <span class="scene__logo"></span>
+                        <span class="bar" style="--w: 48px"></span>
+                        <span class="bar" style="--w: 48px"></span>
+                        <span class="scene__cta">Request a quote</span>
+                      </div>
+                      <div class="scene__hero">
+                        <div class="scene__copy">
+                          <span class="bar bar--lg" style="--w: 78%"></span>
+                          <span class="bar bar--md" style="--w: 60%"></span>
+                          <span class="scene__btn">See products</span>
+                        </div>
+                        <div class="scene__shot"></div>
+                      </div>
+                      <div class="scene__cards">
+                        <span class="scene__card"
+                          ><span class="bar" style="--w: 85%"></span
+                          ><span class="bar bar--dim" style="--w: 55%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="bar" style="--w: 70%"></span
+                          ><span class="bar bar--dim" style="--w: 62%"></span
+                        ></span>
+                        <span class="scene__card"
+                          ><span class="bar" style="--w: 78%"></span
+                          ><span class="bar bar--dim" style="--w: 48%"></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="project__body">
                 <h3>Fyaceros</h3>
@@ -485,24 +756,60 @@
           <h2 class="h2" id="process-title">From idea to launch with a clear path.</h2>
           <div class="process__steps">
             <div class="step reveal">
+              <div class="step__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="21" cy="21" r="10" />
+                  <path d="M29 29l11 11M8 42h6M18 42h6M28 42h6" />
+                </svg>
+              </div>
               <h3>Discover</h3>
               <p>Business, audience, offer, competitors and objectives.</p>
+              <span class="step__tag">Brief &amp; risks</span>
             </div>
             <div class="step reveal" style="--d: 1">
+              <div class="step__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="6" y="8" width="36" height="32" rx="3" />
+                  <path d="M6 16h36M13 24h12M13 31h22" />
+                </svg>
+              </div>
               <h3>Structure</h3>
               <p>Sitemap, conversion flow, wireframes and messaging hierarchy.</p>
+              <span class="step__tag">Sitemap &amp; wireframes</span>
             </div>
             <div class="step reveal" style="--d: 2">
+              <div class="step__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M30 6c-8 6-12 14-12 22l4 6h6l-4-6c8-6 12-14 12-22h-6z" />
+                  <circle cx="31" cy="13" r="3" />
+                  <path d="M14 34L4 40l3-9" />
+                </svg>
+              </div>
               <h3>Design</h3>
               <p>Visual direction, components and responsive screens.</p>
+              <span class="step__tag">Design system</span>
             </div>
             <div class="step reveal" style="--d: 3">
+              <div class="step__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M16 17l-7 7 7 7M32 17l7 7-7 7" />
+                </svg>
+              </div>
               <h3>Build</h3>
               <p>Development, CMS, integrations, QA and optimization.</p>
+              <span class="step__tag">Staging site</span>
             </div>
             <div class="step reveal" style="--d: 4">
+              <div class="step__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M24 5c7 5 10 13 8 23l-4 6h-8l-4-6c-2-10 1-18 8-23z" />
+                  <circle cx="24" cy="18" r="3" />
+                  <path d="M16 27l-6 7 7 1M32 27l6 7-7 1M22 39l2 5 2-5" />
+                </svg>
+              </div>
               <h3>Launch</h3>
               <p>Deployment, analytics, handoff and support.</p>
+              <span class="step__tag">Live + dashboard</span>
             </div>
           </div>
         </div>
@@ -517,6 +824,14 @@
             Every proposal includes a written scope before you commit. The final investment depends
             on page templates, content, integrations, migration and functionality.
           </p>
+
+          <ul class="included" aria-label="Included in every project">
+            <li>Written scope</li>
+            <li>Conversion path</li>
+            <li>Responsive QA</li>
+            <li>Analytics setup</li>
+            <li>Handoff &amp; ownership</li>
+          </ul>
 
           <div class="plans">
             <article class="plan reveal">
@@ -741,21 +1056,30 @@
                 “Fantazy Labz captured exactly what we needed: a site that finally explains the
                 offer and turns visits into conversations.”
               </blockquote>
-              <figcaption><strong>Felipe Pérez</strong> Entrepreneur</figcaption>
+              <figcaption>
+                <span class="quote__avatar" aria-hidden="true">FP</span>
+                <span><strong>Felipe Pérez</strong> Entrepreneur</span>
+              </figcaption>
             </figure>
             <figure class="quote reveal" style="--d: 1">
               <blockquote>
                 “Since Fantazy Labz built our website, clients arrive at the first call already
                 understanding what we do and what to expect.”
               </blockquote>
-              <figcaption><strong>Brandon Trujillo</strong> Builder</figcaption>
+              <figcaption>
+                <span class="quote__avatar" aria-hidden="true">BT</span>
+                <span><strong>Brandon Trujillo</strong> Builder</span>
+              </figcaption>
             </figure>
             <figure class="quote reveal" style="--d: 2">
               <blockquote>
                 “Working with Fantazy Labz has been a relief. Clear scope, steady updates and a
                 website we fully own and manage.”
               </blockquote>
-              <figcaption><strong>Yamaha Rompoo</strong> Company</figcaption>
+              <figcaption>
+                <span class="quote__avatar" aria-hidden="true">YR</span>
+                <span><strong>Yamaha Rompoo</strong> Company</span>
+              </figcaption>
             </figure>
           </div>
         </div>

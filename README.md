@@ -65,7 +65,7 @@ Custom domain (e.g. fantazylabz.com): add the domain in **Settings → Pages →
 ## Pending content
 
 - **Testimonials**: the quotes were completed from the truncated originals — confirm the full text with each client before publishing (search for `TODO(content)` in `index.html`).
-- **Portfolio screenshots**: put the images in `public/work/` and add an `<img>` inside each `.shot__media` (a commented example is in `index.html`). The frame is fixed at 16:10 with `object-fit: cover`, and the gradient placeholder hides itself once the slot has content.
+- **Portfolio screenshots**: the hero, transformation and work sections currently use animated CSS site mockups (browser frames with skeleton scenes). Drop real screenshots or videos in to replace them — inside each `.shot__media` add an `<img>` (a commented example is in `index.html`); the frame is fixed at 16:10 with `object-fit: cover`.
 - **Legal pages**: `privacy.html` and `terms.html` are drafts for review by someone qualified.
 - **Review SLA**: the review page promises a reply within two business days — only keep that promise if the team can answer with quality within that window.
 - **Per-vertical pages**: the strategy recommends auxiliary pages in the language of each vertical (consulting, recruiting, engineering, logistics) for campaigns and outbound. The main site intentionally stays on "service businesses".

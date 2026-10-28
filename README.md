@@ -9,7 +9,7 @@ npm install
 npm run dev        # http://localhost:5173
 npm run build      # type-check + production build to dist/
 npm run lint       # ESLint + Prettier check
-npm test           # Playwright checks: pin, reduced motion, mobile menu, forms
+npm test           # Playwright checks: motion grid, reduced motion, mobile menu, forms
 npm run og         # re-render public/og.png from scripts/og.html
 ```
 
@@ -26,14 +26,14 @@ npm run og         # re-render public/og.png from scripts/og.html
 ## Structure
 
 - `src/main.ts`: mobile menu, reveal-on-enter, Formspree binding for any `form[data-js-form]`, multi-step qualifier (`[data-stepper]`), lazy GSAP loader
-- `src/motion.ts`: hero scroll-out, word highlight, pinned website system, CTA scale, portfolio parallax
+- `src/motion.ts`: hero scroll-out, word highlight, CTA scale, portfolio parallax
 - `src/styles/`: `tokens` → `base` → `layout` → `components` → `motion`, bundled into one CSS file
 - `public/`: `robots.txt`, `sitemap.xml`, `og.png`, `favicon.svg`
 
 Motion rules:
 
 - Animations only touch `transform` and `opacity`. `npm test` asserts this for scrubbed elements.
-- The website-system pin only runs at ≥1024px with motion allowed. Everywhere else, the cards sit in normal flow.
+- The website-system section shows all six capabilities as a scannable grid. No pinned/scrubbed layout.
 
 ## Forms
 

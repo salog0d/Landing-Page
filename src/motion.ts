@@ -9,30 +9,17 @@ export function initMotion() {
   splitHighlight();
 
   const mm = gsap.matchMedia();
-  mm.add(
-    { motion: '(prefers-reduced-motion: no-preference)', desktop: '(min-width: 1024px)' },
-    (ctx) => {
-      const { motion, desktop } = ctx.conditions!;
-      if (!motion) return;
+  mm.add({ motion: '(prefers-reduced-motion: no-preference)' }, (ctx) => {
+    const { motion } = ctx.conditions!;
+    if (!motion) return;
 
-      // Created top-to-bottom so triggers below the pin account for its spacer.
-      heroOut();
-      heroChips();
-      highlight();
-      // Pin + normalizeScroll only on desktop; mobile keeps native scrolling and normal flow.
-      const unpin = desktop ? systemPin() : undefined;
-      if (desktop && unpin) ScrollTrigger.normalizeScroll(true);
-      ctaIn();
-      parallax();
-      mockReveal();
-
-      return () => {
-        if (!desktop) return;
-        ScrollTrigger.normalizeScroll(false);
-        unpin?.();
-      };
-    },
-  );
+    heroOut();
+    heroChips();
+    highlight();
+    ctaIn();
+    parallax();
+    mockReveal();
+  });
 
   // Web fonts change text height after load; re-measure once they're in.
   document.fonts.ready.then(() => ScrollTrigger.refresh());
@@ -134,46 +121,4 @@ function parallax() {
       },
     );
   });
-}
-
-/** Apple-style pinned website system: list advances on the left, cards crossfade on the right. */
-function systemPin() {
-  const section = document.querySelector<HTMLElement>('.system');
-  if (!section) return;
-  const cards = gsap.utils.toArray<HTMLElement>('.capability', section);
-  const items = gsap.utils.toArray<HTMLElement>('.system__nav li', section);
-  section.classList.add('has-pin');
-
-  gsap.set(cards.slice(1), { opacity: 0, y: 80 });
-  gsap.set(items.slice(1), { opacity: 0.3 });
-
-  const tl = gsap.timeline({
-    defaults: { duration: 1, ease: 'power2.inOut' },
-    scrollTrigger: {
-      trigger: section.querySelector('.system__stage'),
-      start: 'top top',
-      end: () => `+=${(cards.length - 1) * window.innerHeight * 0.75}`,
-      pin: true,
-      scrub: 0.6,
-      snap: { snapTo: 'labels', duration: { min: 0.2, max: 0.6 }, ease: 'power1.inOut' },
-      invalidateOnRefresh: true,
-    },
-  });
-
-  tl.addLabel('s0');
-  for (let i = 1; i < cards.length; i++) {
-    tl.to(cards[i - 1], { opacity: 0, y: -80, scale: 0.96 })
-      .to(items[i - 1], { opacity: 0.3 }, '<')
-      .to(cards[i], { opacity: 1, y: 0 }, '<')
-      .to(items[i], { opacity: 1 }, '<')
-      .addLabel(`s${i}`);
-  }
-  tl.fromTo(
-    section.querySelector('.system__bar'),
-    { scaleY: 1 / cards.length },
-    { scaleY: 1, ease: 'none', duration: tl.duration() },
-    0,
-  );
-
-  return () => section.classList.remove('has-pin');
 }

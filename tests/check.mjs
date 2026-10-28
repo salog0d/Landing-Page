@@ -54,38 +54,30 @@ async function test(name, fn) {
   }
 }
 
-await test('desktop: system pin + scrub, compositor-only inline styles', async () => {
+await test('desktop: system is a scannable grid, no pin, all cards visible', async () => {
   const { ctx, page } = await open(BASE, DESKTOP, 'no-preference');
-  await page.waitForSelector('.pin-spacer', { state: 'attached', timeout: 5000 });
-  assert.equal(await page.locator('.system.has-pin').count(), 1);
+  await page.waitForSelector('.system .capability', { state: 'attached', timeout: 5000 });
+  assert.equal(await page.locator('.pin-spacer').count(), 0);
+  assert.equal(await page.locator('.system.has-pin').count(), 0);
 
-  let o = await opacity(page, '.capability');
-  assert.equal(o[0], 1);
-  assert.equal(o[1], 0);
+  // All six capabilities are in the document and reachable without pinning.
+  const count = await page.locator('.capability').count();
+  assert.equal(count, 6, `expected 6 capabilities, got ${count}`);
 
-  // Scroll to the third capability (labels are every 0.75 viewport).
-  await page.evaluate(() => {
-    const top = document.querySelector('.pin-spacer').getBoundingClientRect().top + scrollY;
-    window.scrollTo(0, top + innerHeight * 0.75 * 2);
-  });
-  await page
-    .waitForFunction(
-      () => getComputedStyle(document.querySelectorAll('.capability')[2]).opacity === '1',
-      null,
-      { timeout: 5000 },
-    )
-    .catch(() => {});
-  o = await opacity(page, '.capability');
-  assert.ok(o[2] > 0.9, `third card should be visible, got ${o[2]}`);
-  assert.ok(o[0] < 0.1, `first card should be hidden, got ${o[0]}`);
+  // Scroll the system section into view; every card must be visible (no scroll-scrubbed hiding).
+  await page.locator('.system').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(700);
+  const o = await opacity(page, '.capability');
+  assert.ok(
+    o.every((v) => v > 0.9),
+    `all cards should be visible, got ${o}`,
+  );
 
   // Every inline style GSAP wrote on scrubbed elements must be transform/opacity.
-  // Pin spacer + pinned stage are excluded: pinning sets position once at start/end, not per frame.
   const bad = await page.evaluate(() => {
     const ok = /^(--.*|transform|opacity|translate|rotate|scale|transform-origin)$/;
     const offenders = [];
     for (const el of document.querySelectorAll('main [style]')) {
-      if (el.matches('.pin-spacer, .system__stage')) continue;
       for (const prop of Array.from(el.style))
         if (!ok.test(prop)) offenders.push(`${el.className}: ${prop}`);
     }

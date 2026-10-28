@@ -2,11 +2,11 @@
 
 .js .reveal {
   opacity: 0;
-  transform: translateY(48px);
+  transform: translateY(24px);
   transition:
-    opacity 1s var(--ease-out),
-    transform 1s var(--ease-out);
-  transition-delay: calc(var(--d, 0) * 90ms);
+    opacity 0.5s var(--ease-out),
+    transform 0.5s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 60ms);
 }
 
 .js .reveal.is-in {

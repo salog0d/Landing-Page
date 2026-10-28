@@ -234,10 +234,10 @@
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 82svh;
   display: grid;
   place-items: center;
-  padding-block: calc(var(--nav-h) + 48px) 72px;
+  padding-block: calc(var(--nav-h) + 40px) 56px;
   overflow: hidden;
   text-align: center;
 }
@@ -1608,7 +1608,7 @@
 .hero__visual {
   position: relative;
   max-width: 880px;
-  margin: clamp(56px, 8vw, 88px) auto 0;
+  margin: clamp(40px, 6vw, 64px) auto 0;
   animation: fade-up 1s var(--ease-out) 1.05s both;
 }
 

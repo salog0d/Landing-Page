@@ -44,7 +44,7 @@ const io = new IntersectionObserver(
       io.unobserve(entry.target);
     }
   },
-  { rootMargin: '0px 0px -8% 0px' },
+  { rootMargin: '0px 0px -4% 0px' },
 );
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 

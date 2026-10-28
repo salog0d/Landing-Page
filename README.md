@@ -28,7 +28,7 @@ npm run og         # re-render public/og.png from scripts/og.html
 - `src/main.ts`: mobile menu, reveal-on-enter, Formspree binding for any `form[data-js-form]`, multi-step qualifier (`[data-stepper]`), lazy GSAP loader
 - `src/motion.ts`: hero scroll-out, word highlight, CTA scale, portfolio parallax
 - `src/styles/`: `tokens` → `base` → `layout` → `components` → `motion`, bundled into one CSS file
-- `public/`: `robots.txt`, `sitemap.xml`, `og.png`, `favicon.svg`
+- `public/`: `robots.txt`, `sitemap.xml`, `og.png`, `favicon.png`, `logo.webp`
 
 Motion rules:
 

@@ -281,6 +281,9 @@
 
 .hero__inner {
   position: relative;
+  /* Grid items default to min-width:auto; without this the hero content can't shrink
+     below its min-content width and the title/CTAs get clipped on narrow screens. */
+  min-width: 0;
 }
 
 .hero .eyebrow {
@@ -1696,6 +1699,9 @@
 .mock {
   position: relative;
   overflow: hidden;
+  /* Let the browser frame shrink on narrow screens instead of clipping its
+     fixed-width skeleton bars and nowrap CTAs off the right edge. */
+  min-width: 0;
   border: 1px solid rgb(255 255 255 / 0.12);
   border-radius: 16px;
   background: #0d0d0f;
